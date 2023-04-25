@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C22A69F29F7FEF3001342A5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C22A69E29F7FEF3001342A5 /* DataStore.swift */; };
 		6C25D85129F7F9E300A3D238 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85029F7F9E300A3D238 /* AppDelegate.swift */; };
 		6C25D85329F7F9E300A3D238 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */; };
 		6C25D85529F7F9E300A3D238 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85429F7F9E300A3D238 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C22A69E29F7FEF3001342A5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		6C25D84D29F7F9E300A3D238 /* TimeHopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeHopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C25D85029F7F9E300A3D238 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C22A69C29F7FED9001342A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6C22A69D29F7FEE3001342A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6C22A69E29F7FEF3001342A5 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6C22A6A029F7FF02001342A5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6C25D85629F7F9E300A3D238 /* Main.storyboard */,
+				6C25D85B29F7F9E600A3D238 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6C22A6A129F7FF10001342A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6C25D85029F7F9E300A3D238 /* AppDelegate.swift */,
+				6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */,
+				6C25D85E29F7F9E600A3D238 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6C22A6A229F7FF20001342A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C25D85929F7F9E600A3D238 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6C25D84429F7F9E300A3D238 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +100,22 @@
 		6C25D84F29F7F9E300A3D238 /* TimeHopper */ = {
 			isa = PBXGroup;
 			children = (
-				6C25D85029F7F9E300A3D238 /* AppDelegate.swift */,
-				6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */,
-				6C25D85429F7F9E300A3D238 /* ViewController.swift */,
-				6C25D85629F7F9E300A3D238 /* Main.storyboard */,
-				6C25D85929F7F9E600A3D238 /* Assets.xcassets */,
-				6C25D85B29F7F9E600A3D238 /* LaunchScreen.storyboard */,
-				6C25D85E29F7F9E600A3D238 /* Info.plist */,
+				6C25D86E29F7FE6900A3D238 /* ViewControllers */,
+				6C22A69C29F7FED9001342A5 /* Models */,
+				6C22A69D29F7FEE3001342A5 /* Services */,
+				6C22A6A029F7FF02001342A5 /* Storyboards */,
+				6C22A6A129F7FF10001342A5 /* App */,
+				6C22A6A229F7FF20001342A5 /* Resources */,
 			);
 			path = TimeHopper;
+			sourceTree = "<group>";
+		};
+		6C25D86E29F7FE6900A3D238 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C25D85429F7F9E300A3D238 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C25D85529F7F9E300A3D238 /* ViewController.swift in Sources */,
+				6C22A69F29F7FEF3001342A5 /* DataStore.swift in Sources */,
 				6C25D85129F7F9E300A3D238 /* AppDelegate.swift in Sources */,
 				6C25D85329F7F9E300A3D238 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeHopper/Info.plist;
+				INFOPLIST_FILE = TimeHopper/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeHopper/Info.plist;
+				INFOPLIST_FILE = TimeHopper/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

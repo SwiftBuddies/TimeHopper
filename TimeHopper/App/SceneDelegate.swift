@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  TimeHopper
 //
-//  Created by Elena Sharipova on 25.04.2023.
+//  Created by SwiftBuddies on 25.04.2023.
 //
 
 import UIKit
