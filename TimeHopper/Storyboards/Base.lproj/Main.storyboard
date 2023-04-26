@@ -43,6 +43,7 @@
                                 <state key="normal" title="Настроить машину времени"/>
                                 <connections>
                                     <action selector="timeMachineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qnw-j2-lgf"/>
+                                    <segue destination="8br-dA-Ra9" kind="show" id="1Uk-68-dKE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r30-4b-HNw">
@@ -81,6 +82,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="129.375" y="-34.859154929577464"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="Ev8-AU-Gya">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="location" id="8br-dA-Ra9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ehl-V6-eZ1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5f-8L-Nox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="-164"/>
         </scene>
     </scenes>
     <resources>
