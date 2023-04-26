@@ -14,7 +14,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timeMachineButton.layer.cornerRadius = 15
+        timeMachineButton.layer.cornerRadius = 10
     }
 //
 //
