@@ -6,34 +6,46 @@
 //
 
 struct Route {
-//    маршрут, доступный в определенном годе, локации, вселенной
+    
+    let routeUniverse: String
+    let routeLocation: String
+    let routeYear: Int
     let routeName: String
     let routeDescription: String
     let routeImage: String
-    let routeYear: Year
-    let routeLocation: Location
-    let routeUniverse: Universe
+    
+    static func getRoute() -> [Route] {
+        
+        var routes: [Route] = []
+        
+        let universes = DataStore.shared.universes
+        let locations = DataStore.shared.locations
+        let years = DataStore.shared.years
+        let routeNames = DataStore.shared.routeNames
+        let routeDescriptions = DataStore.shared.routeDescriptions
+        
+        let iterationCount = min(
+            universes.count,
+            locations.count,
+            years.count,
+            routeNames.count,
+            routeDescriptions.count
+        )
+        
+        for i in 0..<iterationCount {
+            let route = Route(routeUniverse: universes[i],
+                              routeLocation: locations[i],
+                              routeYear: years[i],
+                              routeName: routeNames[i],
+                              routeDescription: routeDescriptions[i],
+                              routeImage: "")
+            routes.append(route)
+        }
+        
+        return routes
+    }
 }
 
-enum Year {
-//    список лет
-}
-
-struct Location {
-//   локации
-    let locationName: String
-    let year: Year
-    let locationUniverse: Universe
-}
-
-enum Universe {
-//    список вселенных
-}
-
-struct Question {
-    let question: String
-    let answer: Any
-}
 
 //MARK: - Quiz Model
 struct QuizQuestion {
@@ -43,10 +55,10 @@ struct QuizQuestion {
 
 struct QuizAnswer {
     let title: String
-    let time: Result
+    let time: QuizResult
 }
 
-enum Result {
+enum QuizResult {
   
 }
 
