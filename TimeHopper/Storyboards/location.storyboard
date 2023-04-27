@@ -66,9 +66,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jog-0c-Eq2">
-                                <rect key="frame" x="16" y="103" width="361" height="666"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jog-0c-Eq2">
+                                <rect key="frame" x="16" y="123" width="361" height="666"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,6 +75,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jog-0c-Eq2" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="20" id="NmY-bJ-du2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jog-0c-Eq2" secondAttribute="trailing" constant="16" id="X5l-fA-Q0Z"/>
+                            <constraint firstItem="Jog-0c-Eq2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ZOV-21-dzx"/>
+                            <constraint firstItem="Jog-0c-Eq2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="x88-Xy-PGE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OJW-OX-2x4"/>
                 </viewController>
@@ -91,9 +96,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfY-2g-9p9">
-                                <rect key="frame" x="16" y="59" width="361" height="689"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfY-2g-9p9">
+                                <rect key="frame" x="16" y="79" width="361" height="670"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,6 +105,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fmd-Mg-bWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bfY-2g-9p9" firstAttribute="top" secondItem="fmd-Mg-bWS" secondAttribute="top" constant="20" id="BXf-I8-F9O"/>
+                            <constraint firstItem="fmd-Mg-bWS" firstAttribute="bottom" secondItem="bfY-2g-9p9" secondAttribute="bottom" constant="20" id="kt1-cb-j7X"/>
+                            <constraint firstItem="fmd-Mg-bWS" firstAttribute="trailing" secondItem="bfY-2g-9p9" secondAttribute="trailing" constant="16" id="smR-S1-aZ5"/>
+                            <constraint firstItem="bfY-2g-9p9" firstAttribute="leading" secondItem="fmd-Mg-bWS" secondAttribute="leading" constant="16" id="vYJ-o5-hbD"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Локация" image="location" catalog="system" id="Kub-St-fjo"/>
                 </viewController>
