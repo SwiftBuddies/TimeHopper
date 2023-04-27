@@ -7,23 +7,31 @@
 
 import UIKit
 
-class QuizViewController: UIViewController {
+final class QuizViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet var questionProgressView: UIProgressView!
+    @IBOutlet var questionLabel: UILabel!
+    
+    
+    @IBOutlet var firstAnswerLabel: UILabel!
+    @IBOutlet var secondAnswerLabel: UILabel!
+    @IBOutlet var thirdAnswerLabel: UILabel!
+    @IBOutlet var fourthAnswerLabel: UILabel!
+    
+    
+    @IBOutlet var firstSwitch: UISwitch!
+    @IBOutlet var secondSwitch: UISwitch!
+    @IBOutlet var thirdSwitch: UISwitch!
+    @IBOutlet var fourthSwitch: UISwitch!
+    
+    // MARK: -  View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    // MARK: - IBActions
+    @IBAction func answerButtonPressed(_ sender: Any) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
