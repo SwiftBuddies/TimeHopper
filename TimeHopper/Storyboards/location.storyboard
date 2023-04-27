@@ -12,7 +12,7 @@
         <!--Root View Controller-->
         <scene sceneID="Wn0-t9-zj6">
             <objects>
-                <tableViewController id="Lz4-Ft-diJ" sceneMemberID="viewController">
+                <tableViewController id="Lz4-Ft-diJ" customClass="LocationTableViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SSr-cg-iB4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="2631.2977099236641" y="29.577464788732396"/>
         </scene>
-        <!--View Controller-->
+        <!--Detailed Information View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="DetailedInformationViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
