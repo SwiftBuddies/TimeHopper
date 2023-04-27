@@ -12,7 +12,7 @@ struct Route {
     let routeYear: Int
     let routeName: String
     let routeDescription: String
-    let routeImage: String
+   // let routeImage: String
     
     static func getRoute() -> [Route] {
         
@@ -39,8 +39,9 @@ struct Route {
                 routeLocation: locations[i],
                 routeYear: years[i],
                 routeName: routeNames[i],
-                routeDescription: routeDescriptions[i],
-                routeImage: "") // сомневаюсь как ту правильно
+                routeDescription: routeDescriptions[i]
+               // routeImage: "" // сомневаюсь как ту правильно
+                )
             routes.append(route)
         }
         
