@@ -9,15 +9,35 @@ final class DataStore {
     
     static let shared = DataStore()
     
-    let universes = [" ", " ", " "]
-    let locations =  [" ", " ", "тут тайный маршрут"]
-    let years = [1,2,3,4]
-    let routeNames = [" ", " "]
-    let routeDescriptions = [" ", " "]
+    //MARK: - Route Data Store
+    let universes = [
+        "Человеческий мир",
+        "Фантазийный мир",
+        "Тайный маршрут"
+    ]
     
+    let locations =  [
+        "Эра человека разумного",
+        "Древний Египет",
+        "Земля",
+        "Орбита Сатурна",
+        "Хогвартс",
+        "Галактика"
+    ]
     
+    let years = [1,2,3,4] // заполнить
+    let routeNames = [" ", " "] // заполнить
+    let routeDescriptions = [" ", " "] // заполнить
+    let images = [" ", " "] // заполнить
     
-    // тут не всё
+    //MARK: - Quiz Data Store
+    
+    // добавить данные для квиза
+    
+    //MARK: - Team Data Store
+    
+    // добавить данные команды
+    
     
     
     private init() {}
