@@ -24,7 +24,8 @@ struct Route {
         let routeNames = DataStore.shared.routeNames
         let routeDescriptions = DataStore.shared.routeDescriptions
         
-        let iterationCount = min(
+        // тут не уверена
+        let iterationCount = max(
             universes.count,
             locations.count,
             years.count,
