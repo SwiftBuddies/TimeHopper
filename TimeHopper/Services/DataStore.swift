@@ -9,7 +9,7 @@ final class DataStore {
     
     static let shared = DataStore()
     
-    //MARK: - Route Data Store
+//MARK: - Route Data Store
     let universes = [
         "Человеческий мир",
         "Фантазийный мир",
@@ -30,11 +30,11 @@ final class DataStore {
     let routeDescriptions = [" ", " "] // заполнить
     let images = [" ", " "] // заполнить
     
-    //MARK: - Quiz Data Store
+//MARK: - Quiz Data Store
     
     // добавить данные для квиза
     
-    //MARK: - Team Data Store
+//MARK: - Team Data Store
     
     // добавить данные команды
     
