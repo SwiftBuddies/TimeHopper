@@ -28,7 +28,7 @@ final class DataStore {
     let years = [1,2,3,4] // заполнить
     let routeNames = [" ", " "] // заполнить
     let routeDescriptions = [" ", " "] // заполнить
-    let images = [" ", " "] // заполнить
+    let routeImages = [" ", " "] // заполнить
     
 //MARK: - Quiz Data Store
     
