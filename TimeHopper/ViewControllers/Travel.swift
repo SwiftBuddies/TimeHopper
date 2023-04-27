@@ -33,12 +33,13 @@ struct Route {
         )
         
         for i in 0..<iterationCount {
-            let route = Route(routeUniverse: universes[i],
-                              routeLocation: locations[i],
-                              routeYear: years[i],
-                              routeName: routeNames[i],
-                              routeDescription: routeDescriptions[i],
-                              routeImage: "")
+            let route = Route(
+                routeUniverse: universes[i],
+                routeLocation: locations[i],
+                routeYear: years[i],
+                routeName: routeNames[i],
+                routeDescription: routeDescriptions[i],
+                routeImage: "") // сомневаюсь как ту правильно
             routes.append(route)
         }
         
@@ -46,11 +47,31 @@ struct Route {
     }
 }
 
+enum Question {
+    case universe
+    case location
+    case year
+    
+    var textQuestion: String {
+        switch self {
+        case .universe:
+            return "Выберите вселенную"
+        case .location:
+            return "Какую локацию выберем?"
+        case .year:
+            return "В какой год отправимся?"
+        }
+    }
+}
 
 //MARK: - Quiz Model
 struct QuizQuestion {
     let quizTitle: String
     let quizAnswers: [QuizAnswer]
+    
+    static func getQuizQuestion() -> [QuizQuestion] {
+        [] //тут надо переписать метод используя DataStore
+    }
 }
 
 struct QuizAnswer {
@@ -58,8 +79,21 @@ struct QuizAnswer {
     let time: QuizResult
 }
 
-enum QuizResult {
-  
+enum QuizResult: Int {
+    case humanPast = 1990// год.random!!!
+    case humanFuture = 1991
+    case alternativeWorld = 1992
+    
+    var definition: String {
+        switch self {
+        case .humanPast:
+            return "page past"
+        case .humanFuture:
+            return "page future"
+        case .alternativeWorld:
+            return "page alternative world" //model random!!!
+        }
+    }
 }
 
 //MARK: - Team Model
@@ -71,5 +105,9 @@ struct TeamMember {
     
     var fullName: String {
         "\(name) \(surname)"
+    }
+    
+    static func getMember() {
+        // добавить метод
     }
 }
