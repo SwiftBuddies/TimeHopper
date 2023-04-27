@@ -20,7 +20,7 @@ enum Year {
 }
 
 struct Location {
-//   локации 
+//   локации
     let locationName: String
     let year: Year
     let locationUniverse: Universe
@@ -35,6 +35,22 @@ struct Question {
     let answer: Any
 }
 
+//MARK: - Quiz Model
+struct QuizQuestion {
+    let quizTitle: String
+    let quizAnswers: [QuizAnswer]
+}
+
+struct QuizAnswer {
+    let title: String
+    let time: Result
+}
+
+enum Result {
+  
+}
+
+//MARK: - Team Model
 struct TeamMember {
     let name: String
     let surname: String
