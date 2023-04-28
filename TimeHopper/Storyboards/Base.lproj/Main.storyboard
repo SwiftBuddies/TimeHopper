@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tPi-83-3pp">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaU-oO-EJv">
-                                <rect key="frame" x="16" y="80" width="288" height="117"/>
+                                <rect key="frame" x="16" y="124" width="288" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="117" id="Uvc-Gv-MdA"/>
+                                    <constraint firstAttribute="height" constant="100" id="Uvc-Gv-MdA"/>
                                 </constraints>
                                 <string key="text">Привет! Готов к путешествию? 
 Тогда давай знакомиться и не забудь пристегнуться!</string>
@@ -30,12 +30,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Ваше имя:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwP-Bf-sea">
-                                <rect key="frame" x="29" y="253" width="262" height="34"/>
+                                <rect key="frame" x="29" y="280" width="262" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvG-0S-t2B">
-                                <rect key="frame" x="29" y="347" width="262" height="34"/>
+                                <rect key="frame" x="29" y="374" width="262" height="34"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,14 +45,13 @@
                                     <action selector="timeMachineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qnw-j2-lgf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r30-4b-HNw">
-                                <rect key="frame" x="16" y="522.5" width="288" height="25.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Путешествие организовано командой SwiftBuddies ">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
-                                </buttonConfiguration>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wL-ui-JIM">
+                                <rect key="frame" x="16" y="524" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Путешествие организовано командой SwiftBuddies "/>
                                 <connections>
-                                    <action selector="aboutTeamButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpb-Sj-BPd"/>
+                                    <segue destination="Ace-QE-tIa" kind="show" id="hn8-ta-5YC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,17 +61,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EvG-0S-t2B" secondAttribute="trailing" constant="29" id="CHl-DR-YLa"/>
                             <constraint firstItem="uaU-oO-EJv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Cz9-dg-aRS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uaU-oO-EJv" secondAttribute="trailing" constant="16" id="HJX-fZ-exQ"/>
-                            <constraint firstItem="r30-4b-HNw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XjJ-eT-fON"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2wL-ui-JIM" secondAttribute="bottom" constant="20" id="S70-rl-P3R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2wL-ui-JIM" secondAttribute="trailing" constant="16" id="Ure-kU-vPT"/>
+                            <constraint firstItem="2wL-ui-JIM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WHz-Nr-lYT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lwP-Bf-sea" secondAttribute="trailing" constant="29" id="Xxj-H5-31Y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r30-4b-HNw" secondAttribute="bottom" constant="20" id="ZVL-eH-1ej"/>
                             <constraint firstItem="EvG-0S-t2B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="dwD-HA-LSQ"/>
                             <constraint firstItem="lwP-Bf-sea" firstAttribute="top" secondItem="uaU-oO-EJv" secondAttribute="bottom" constant="56" id="kgE-hB-5ZE"/>
                             <constraint firstItem="uaU-oO-EJv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="nb2-ul-DRb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r30-4b-HNw" secondAttribute="trailing" constant="16" id="v7V-zj-Q5q"/>
                             <constraint firstItem="lwP-Bf-sea" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="xLC-vh-5N2"/>
                             <constraint firstItem="EvG-0S-t2B" firstAttribute="top" secondItem="lwP-Bf-sea" secondAttribute="bottom" constant="60" id="z8a-Zh-HLV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tNG-ML-gY9"/>
                     <connections>
                         <outlet property="nameTextField" destination="lwP-Bf-sea" id="Xkn-87-m30"/>
                         <outlet property="timeMachineButton" destination="EvG-0S-t2B" id="jy4-0g-kS4"/>
@@ -80,7 +80,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129.375" y="-34.859154929577464"/>
+            <point key="canvasLocation" x="1126.875" y="-34.859154929577464"/>
+        </scene>
+        <!--team-->
+        <scene sceneID="Dn4-BP-bcV">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="team" storyboardName="TeamInfo" referencedIdentifier="team" id="Ace-QE-tIa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="C6r-t9-TbA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLg-tN-IKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816" y="229"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zZg-qt-RTe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tPi-83-3pp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mHa-Bf-MSy">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2C8-vX-sgV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXa-GS-l0i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="-35"/>
         </scene>
     </scenes>
     <resources>
