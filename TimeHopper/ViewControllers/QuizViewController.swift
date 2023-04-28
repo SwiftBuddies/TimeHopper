@@ -53,7 +53,6 @@ final class QuizViewController: UIViewController {
 // MARK: - Private Methods
 private extension QuizViewController {
     func updateUI() {
-        //        resetSwitches()
         let currentQuestion = questions[questionIndex]
         questionLabel.text = currentQuestion.title
         
@@ -81,14 +80,7 @@ private extension QuizViewController {
             updateUI()
             return
         }
-        
-        performSegue(withIdentifier: "showResult", sender: nil) // какой переход?
+        //добавить идентификатор в приветственную страницу путеводителя?
+        performSegue(withIdentifier: "showResult", sender: nil) // или какой переход?
     }
-    
-    //    func resetSwitches() {
-    //        firstSwitch.isOn = false
-    //        secondSwitch.isOn = false
-    //        thirdSwitch.isOn = false
-    //        fourthSwitch.isOn = false
-    //    }
 }
