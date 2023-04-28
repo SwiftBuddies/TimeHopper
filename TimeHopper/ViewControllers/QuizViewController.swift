@@ -71,7 +71,7 @@ private extension QuizViewController {
         case 2:
             title = "Почти закончили 🤌🏻"
         default:
-            title = "И на последок... 😎"
+            title = "Последний рывок... 😎"
         }
         
         let totalProgress = Float(questionIndex) / Float(questions.count)
