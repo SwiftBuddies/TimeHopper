@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+        05215D3929F92B4600602521 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05215D3829F92B4600602521 /* Questions.storyboard */; };
+        059061FC29F984B600986C5C /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059061FB29F984B600986C5C /* QuestionsViewController.swift */; };
 		6650C59C29F963FD00B45521 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650C59B29F963FC00B45521 /* QuizViewController.swift */; };
 		66823B8F29F9424F001CEFCE /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66823B8E29F9424F001CEFCE /* QuizStoryboard.storyboard */; };
 		6C22A69F29F7FEF3001342A5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C22A69E29F7FEF3001342A5 /* DataStore.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+        05215D3829F92B4600602521 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
+        059061FB29F984B600986C5C /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		6650C59B29F963FC00B45521 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		66823B8E29F9424F001CEFCE /* QuizStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizStoryboard.storyboard; sourceTree = "<group>"; };
 		6C22A69E29F7FEF3001342A5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			children = (
 				6C25D85629F7F9E300A3D238 /* Main.storyboard */,
 				6C25D85B29F7F9E600A3D238 /* LaunchScreen.storyboard */,
+                05215D3829F92B4600602521 /* Questions.storyboard */,
 				66823B8E29F9424F001CEFCE /* QuizStoryboard.storyboard */,
 				6C25A73029F90F0D00126A13 /* TeamInfo.storyboard */,
 			);
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				6C25D85429F7F9E300A3D238 /* WelcomeViewController.swift */,
+                059061FB29F984B600986C5C /* QuestionsViewController.swift */,
 				6650C59B29F963FC00B45521 /* QuizViewController.swift */,
 				6CCC66BB29FBDA5800CAAA73 /* TeamInfoViewController.swift */,
 			);
@@ -194,6 +200,7 @@
 				6C25D85D29F7F9E600A3D238 /* LaunchScreen.storyboard in Resources */,
 				6C25A73129F90F0D00126A13 /* TeamInfo.storyboard in Resources */,
 				6C25D85A29F7F9E600A3D238 /* Assets.xcassets in Resources */,
+                05215D3929F92B4600602521 /* Questions.storyboard in Resources */,
 				66823B8F29F9424F001CEFCE /* QuizStoryboard.storyboard in Resources */,
 				6C25D85829F7F9E300A3D238 /* Main.storyboard in Resources */,
 			);
@@ -209,6 +216,7 @@
 				6C8EE6EC29FC10F700ADFC03 /* Travel.swift in Sources */,
 				6CCC66BC29FBDA5800CAAA73 /* TeamInfoViewController.swift in Sources */,
 				6C25D85529F7F9E300A3D238 /* WelcomeViewController.swift in Sources */,
+                059061FC29F984B600986C5C /* QuestionsViewController.swift in Sources */,
 				6650C59C29F963FD00B45521 /* QuizViewController.swift in Sources */,
 				6C22A69F29F7FEF3001342A5 /* DataStore.swift in Sources */,
 				6C25D85129F7F9E300A3D238 /* AppDelegate.swift in Sources */,
