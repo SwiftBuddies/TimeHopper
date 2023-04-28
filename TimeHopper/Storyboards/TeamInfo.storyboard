@@ -143,6 +143,12 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="SwiftBuddies" id="d2z-bB-uxG"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="elenaDemchenkoPhoto" destination="2Ft-QA-9Ef" id="3Fj-MM-xup"/>
+                        <outlet property="elenaSharipovaPhoto" destination="ICM-DL-1i4" id="0dp-rK-Fn7"/>
+                        <outlet property="juliaKazarinaPhoto" destination="h7x-fm-BFm" id="BKw-Po-QQJ"/>
+                        <outlet property="pavelKarunnyjPhoto" destination="0pF-MQ-3ae" id="hpX-Y6-al4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
