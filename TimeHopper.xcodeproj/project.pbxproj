@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		685ECA6D29F9930C003F1B6B /* location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685ECA6C29F9930C003F1B6B /* location.storyboard */; };
+		685ECA6D29F9930C003F1B6B /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685ECA6C29F9930C003F1B6B /* Location.storyboard */; };
 		685ECA6F29F99927003F1B6B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ECA6E29F99927003F1B6B /* LocationViewController.swift */; };
 		685ECA7129F99966003F1B6B /* LocationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ECA7029F99966003F1B6B /* LocationTabBarController.swift */; };
 		685ECA7329F999FE003F1B6B /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ECA7229F999FE003F1B6B /* LocationTableViewController.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		685ECA6C29F9930C003F1B6B /* location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = location.storyboard; sourceTree = "<group>"; };
+		685ECA6C29F9930C003F1B6B /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		685ECA6E29F99927003F1B6B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		685ECA7029F99966003F1B6B /* LocationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTabBarController.swift; sourceTree = "<group>"; };
 		685ECA7229F999FE003F1B6B /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			children = (
 				6C25D85629F7F9E300A3D238 /* Main.storyboard */,
 				6C25D85B29F7F9E600A3D238 /* LaunchScreen.storyboard */,
-				685ECA6C29F9930C003F1B6B /* location.storyboard */,
+				685ECA6C29F9930C003F1B6B /* Location.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 				6C25D85D29F7F9E600A3D238 /* LaunchScreen.storyboard in Resources */,
 				6C25D85A29F7F9E600A3D238 /* Assets.xcassets in Resources */,
 				6C25D85829F7F9E300A3D238 /* Main.storyboard in Resources */,
-				685ECA6D29F9930C003F1B6B /* location.storyboard in Resources */,
+				685ECA6D29F9930C003F1B6B /* Location.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
