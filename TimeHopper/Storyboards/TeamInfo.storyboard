@@ -2,64 +2,65 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Team Info View Controller-->
+        <!--SwiftBuddies-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TeamInfoViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="team" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="TeamInfoViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ID-8w-fTx">
-                                <rect key="frame" x="16" y="60" width="288" height="146"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BW0-hF-mGV">
+                                <rect key="frame" x="30" y="90" width="260" height="70.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="81y-Af-XVn">
-                                        <rect key="frame" x="0.0" y="0.0" width="136.5" height="146"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="81y-Af-XVn">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="70.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-fm-BFm">
-                                                <rect key="frame" x="28.5" y="0.0" width="80" height="80"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-fm-BFm">
+                                                <rect key="frame" x="50" y="0.5" width="20" height="19"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="h7x-fm-BFm" secondAttribute="height" id="X1L-JJ-IJP"/>
+                                                    <constraint firstAttribute="width" secondItem="h7x-fm-BFm" secondAttribute="height" multiplier="1:1" id="Ou2-of-4wC"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXC-nM-Ygg">
-                                                <rect key="frame" x="0.0" y="95" width="136.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <rect key="frame" x="0.0" y="30" width="120" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afs-bS-IGc">
-                                                <rect key="frame" x="18" y="128" width="101" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <rect key="frame" x="18.5" y="56" width="83" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rwN-x0-rHN">
-                                        <rect key="frame" x="151.5" y="0.0" width="136.5" height="146"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-FF-tiS">
+                                        <rect key="frame" x="140" y="0.0" width="120" height="70.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sgd-rU-SR6">
-                                                <rect key="frame" x="28.5" y="0.0" width="80" height="80"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Ft-QA-9Ef">
+                                                <rect key="frame" x="50" y="0.5" width="20" height="19"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Sgd-rU-SR6" secondAttribute="height" id="NGE-WO-ofv"/>
+                                                    <constraint firstAttribute="width" secondItem="2Ft-QA-9Ef" secondAttribute="height" multiplier="1:1" id="o8D-48-yAd"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSm-H6-T0U">
-                                                <rect key="frame" x="0.0" y="95" width="136.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf1-mI-sga">
+                                                <rect key="frame" x="0.0" y="30" width="120" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVC-X7-Gy9">
-                                                <rect key="frame" x="18" y="128" width="101" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8I-y4-NrC">
+                                                <rect key="frame" x="18.5" y="56" width="83" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -67,50 +68,50 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="g1j-Vb-zOl">
-                                <rect key="frame" x="16" y="241" width="288" height="146"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ixG-eG-eib">
+                                <rect key="frame" x="30" y="210.5" width="260" height="70.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="33x-Zl-jZQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="136.5" height="146"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lqv-Mc-ebV">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="70.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V0K-1M-tKK">
-                                                <rect key="frame" x="28.5" y="0.0" width="80" height="80"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-MQ-3ae">
+                                                <rect key="frame" x="50" y="0.5" width="20" height="19"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="V0K-1M-tKK" secondAttribute="height" id="BtT-cV-03t"/>
+                                                    <constraint firstAttribute="width" secondItem="0pF-MQ-3ae" secondAttribute="height" multiplier="1:1" id="0LB-im-7fx"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyw-xf-Lev">
-                                                <rect key="frame" x="0.0" y="95" width="136.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeP-uT-cb8">
+                                                <rect key="frame" x="0.0" y="30" width="120" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZA-FH-lwR">
-                                                <rect key="frame" x="18" y="128" width="101" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDN-dg-xzC">
+                                                <rect key="frame" x="18.5" y="56" width="83" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M9h-Xk-d5H">
-                                        <rect key="frame" x="151.5" y="0.0" width="136.5" height="146"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qbM-L6-zRJ">
+                                        <rect key="frame" x="140" y="0.0" width="120" height="70.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7fv-qs-wf4">
-                                                <rect key="frame" x="28.5" y="0.0" width="80" height="80"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ICM-DL-1i4">
+                                                <rect key="frame" x="50" y="0.5" width="20" height="19"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="7fv-qs-wf4" secondAttribute="height" id="RFq-em-3eZ"/>
+                                                    <constraint firstAttribute="width" secondItem="ICM-DL-1i4" secondAttribute="height" multiplier="1:1" id="WbN-0T-UVD"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgB-uw-Bf7">
-                                                <rect key="frame" x="0.0" y="95" width="136.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7c-LI-PHc">
+                                                <rect key="frame" x="0.0" y="30" width="120" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42D-DM-z7c">
-                                                <rect key="frame" x="18" y="128" width="101" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0l-yg-bKe">
+                                                <rect key="frame" x="18.5" y="56" width="83" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -118,25 +119,38 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVC-8a-Nn2">
+                                <rect key="frame" x="16" y="519" width="288" height="29"/>
+                                <string key="text">SwiftBuddies corporation.
+Все права защищены</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="g1j-Vb-zOl" secondAttribute="trailing" constant="16" id="82f-sW-yA0"/>
-                            <constraint firstItem="g1j-Vb-zOl" firstAttribute="top" secondItem="0ID-8w-fTx" secondAttribute="bottom" constant="35" id="Duj-UY-VzI"/>
-                            <constraint firstItem="g1j-Vb-zOl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="W5H-fi-MjF"/>
-                            <constraint firstItem="0ID-8w-fTx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="c4d-0T-TKF"/>
-                            <constraint firstItem="0ID-8w-fTx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="kCD-w7-gEb"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0ID-8w-fTx" secondAttribute="trailing" constant="16" id="tla-B1-UhD"/>
+                            <constraint firstItem="BW0-hF-mGV" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="5Ts-Rz-DnV"/>
+                            <constraint firstItem="BW0-hF-mGV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="70" id="IsQ-D1-f00"/>
+                            <constraint firstAttribute="bottom" secondItem="QVC-8a-Nn2" secondAttribute="bottom" constant="20" id="JrT-me-hPp"/>
+                            <constraint firstItem="ixG-eG-eib" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KUM-S6-x9Z"/>
+                            <constraint firstItem="QVC-8a-Nn2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="irs-lZ-LxQ"/>
+                            <constraint firstItem="ixG-eG-eib" firstAttribute="top" secondItem="BW0-hF-mGV" secondAttribute="bottom" constant="50" id="otW-ZO-sBt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QVC-8a-Nn2" secondAttribute="trailing" constant="16" id="rGo-HF-aTY"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="SwiftBuddies" id="d2z-bB-uxG"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="52.5" y="-34.859154929577464"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

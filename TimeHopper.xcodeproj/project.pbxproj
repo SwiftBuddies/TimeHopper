@@ -9,19 +9,18 @@
 /* Begin PBXBuildFile section */
 		6C22A69F29F7FEF3001342A5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C22A69E29F7FEF3001342A5 /* DataStore.swift */; };
 		6C25A73129F90F0D00126A13 /* TeamInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C25A73029F90F0D00126A13 /* TeamInfo.storyboard */; };
-		6C25A73329F924B400126A13 /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25A73229F924B300126A13 /* TeamInfoViewController.swift */; };
 		6C25D85129F7F9E300A3D238 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85029F7F9E300A3D238 /* AppDelegate.swift */; };
 		6C25D85329F7F9E300A3D238 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */; };
 		6C25D85529F7F9E300A3D238 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85429F7F9E300A3D238 /* WelcomeViewController.swift */; };
 		6C25D85829F7F9E300A3D238 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C25D85629F7F9E300A3D238 /* Main.storyboard */; };
 		6C25D85A29F7F9E600A3D238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C25D85929F7F9E600A3D238 /* Assets.xcassets */; };
 		6C25D85D29F7F9E600A3D238 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C25D85B29F7F9E600A3D238 /* LaunchScreen.storyboard */; };
+		6CCC66BC29FBDA5800CAAA73 /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCC66BB29FBDA5800CAAA73 /* TeamInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C22A69E29F7FEF3001342A5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		6C25A73029F90F0D00126A13 /* TeamInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamInfo.storyboard; sourceTree = "<group>"; };
-		6C25A73229F924B300126A13 /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
 		6C25D84D29F7F9E300A3D238 /* TimeHopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeHopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C25D85029F7F9E300A3D238 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		6C25D85929F7F9E600A3D238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C25D85C29F7F9E600A3D238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C25D85E29F7F9E600A3D238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CCC66BB29FBDA5800CAAA73 /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				6C25D85429F7F9E300A3D238 /* WelcomeViewController.swift */,
+				6CCC66BB29FBDA5800CAAA73 /* TeamInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCC66BC29FBDA5800CAAA73 /* TeamInfoViewController.swift in Sources */,
 				6C25D85529F7F9E300A3D238 /* WelcomeViewController.swift in Sources */,
 				6C22A69F29F7FEF3001342A5 /* DataStore.swift in Sources */,
 				6C25D85129F7F9E300A3D238 /* AppDelegate.swift in Sources */,
