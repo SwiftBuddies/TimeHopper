@@ -52,6 +52,12 @@ final class QuizViewController: UIViewController {
 
 // MARK: - Private Methods
 private extension QuizViewController {
+    func resetSwitches() {
+        for switches in [firstSwitch, secondSwitch, thirdSwitch, fourthSwitch] {
+            switches?.isOn = true
+        }
+    }
+    
     func updateUI() {
         let currentQuestion = questions[questionIndex]
         questionLabel.text = currentQuestion.title
@@ -71,6 +77,7 @@ private extension QuizViewController {
                 fourthAnswerLabel.text = answer.title
             }
         }
+        resetSwitches()
     }
     
     func nextQuestion() {
