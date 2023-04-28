@@ -62,6 +62,18 @@ private extension QuizViewController {
         let currentQuestion = questions[questionIndex]
         questionLabel.text = currentQuestion.title
         
+        //Какой заголовок вывести в квизе?
+        switch questionIndex {
+        case 0:
+            title = "Начинаем! 🏁"
+        case 1:
+            title = "Еще чуть-чуть 😃"
+        case 2:
+            title = "Почти закончили 🤌🏻"
+        default:
+            title = "И на последок... 😎"
+        }
+        
         let totalProgress = Float(questionIndex) / Float(questions.count)
         questionProgressView.setProgress(totalProgress, animated: true)
         
