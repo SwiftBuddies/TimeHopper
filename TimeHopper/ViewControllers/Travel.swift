@@ -5,49 +5,80 @@
 //  Created by Юлия Ястребова on 27.04.2023.
 //
 
-struct Route {
-    
-    let routeUniverse: String
-    let routeLocation: String
-    let routeYear: Int
-    let routeName: String
-    let routeDescription: String
-   // let routeImage: String
-    
-    static func getRoute() -> [Route] {
-        
-        var routes: [Route] = []
-        
-        let universes = DataStore.shared.universes
-        let locations = DataStore.shared.locations
-        let years = DataStore.shared.years
-        let routeNames = DataStore.shared.routeNames
-        let routeDescriptions = DataStore.shared.routeDescriptions
-        
-        // тут не уверена
-        let iterationCount = max(
-            universes.count,
-            locations.count,
-            years.count,
-            routeNames.count,
-            routeDescriptions.count
-        )
-        
-        for i in 0..<iterationCount {
-            let route = Route(
-                routeUniverse: universes[i],
-                routeLocation: locations[i],
-                routeYear: years[i],
-                routeName: routeNames[i],
-                routeDescription: routeDescriptions[i]
-               // routeImage: "" // сомневаюсь как ту правильно
-                )
-            routes.append(route)
-        }
-        
-        return routes
-    }
+//struct Route {
+//
+//    let routeUniverse: String
+//    let routeLocation: String
+//    let routeYear: Int
+//    let routeName: String
+//    let routeDescription: String
+//   // let routeImage: String
+//
+//    static func getRoute() -> [Route] {
+//
+//        var routes: [Route] = []
+//
+//        let universes = DataStore.shared.universes
+//        let locations = DataStore.shared.locations
+//        let years = DataStore.shared.years
+//        let routeNames = DataStore.shared.routeNames
+//        let routeDescriptions = DataStore.shared.routeDescriptions
+//
+//        // тут не уверена
+//        let iterationCount = max(
+//            universes.count,
+//            locations.count,
+//            years.count,
+//            routeNames.count,
+//            routeDescriptions.count
+//        )
+//
+//        for i in 0..<iterationCount {
+//            let route = Route(
+//                routeUniverse: universes[i],
+//                routeLocation: locations[i],
+//                routeYear: years[i],
+//                routeName: routeNames[i],
+//                routeDescription: routeDescriptions[i]
+//               // routeImage: "" // сомневаюсь как ту правильно
+//                )
+//            routes.append(route)
+//        }
+//
+//        return routes
+//    }
+//}
+
+struct Universe {
+    let title: String
+    let locations: [Location]
 }
+
+struct Location {
+    let locationTitle: String
+    let years: [Years]
+}
+
+struct Years {
+    let year: Int
+    let routes: [Route]
+}
+
+struct Route {
+    let routeTitle: String
+    let routeDescription: String
+    
+//    static func getRoute() -> [(String, String)] {
+//
+//        var routes = []
+//
+//        for (routeTitle, routeDescription) in тут словарь {
+//            routesDescriptions.append((routeTitle, routeDescription))
+//        }
+//        return routesDescriptions
+//    }
+}
+
 
 enum Question {
     case universe
