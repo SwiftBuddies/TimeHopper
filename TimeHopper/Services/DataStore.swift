@@ -10,7 +10,7 @@ final class DataStore {
     static let shared = DataStore()
         
 //MARK: - Route Data Store
-    let universe = [[
+    let universes = [[
         "title": "Наш мир",
         "locations": [[
             "title": "Земля, Римская империя",

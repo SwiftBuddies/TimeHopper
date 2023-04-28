@@ -52,31 +52,79 @@
 struct Universe {
     let title: String
     let locations: [Location]
+    
+    static func getUniverses(from universesFromDataStore: [[String : Any]]) -> [Universe] {
+        var universes: [Universe] = []
+        
+        for universeFromDataStore in universesFromDataStore {
+            let universe = Universe(
+                title: universeFromDataStore["title"] as! String,
+                locations: Location.getLocations(from: universeFromDataStore["locations"] as! [[String : Any]])
+            )
+            universes.append(universe)
+        }
+        
+        return universes
+    }
 }
 
 struct Location {
-    let locationTitle: String
-    let years: [Years]
+    let title: String
+    let years: [Year]
+    
+    static func getLocations(from locationsFromDataStore: [[String : Any]]) -> [Location] {
+        var locations: [Location] = []
+        
+        for locationFromDataStore in locationsFromDataStore {
+            let location = Location(
+                title: locationFromDataStore["title"] as! String,
+                years: Year.getYears(from: locationFromDataStore["years"] as! [[String : Any]])
+            )
+            locations.append(location)
+        }
+        
+        return locations
+    }
 }
 
-struct Years {
-    let year: Int
+struct Year {
+    let title: String
+    let description: String
     let routes: [Route]
+    
+    static func getYears(from yearsFromDataStore: [[String : Any]]) -> [Year] {
+        var years: [Year] = []
+        
+        for yearFromDataStore in yearsFromDataStore {
+            let year = Year(
+                title: yearFromDataStore["title"] as! String,
+                description: yearFromDataStore["description"] as! String,
+                routes: Route.getRoutes(from: yearFromDataStore["routes"] as! [[String : Any]])
+            )
+            years.append(year)
+        }
+        
+        return years
+    }
 }
 
 struct Route {
-    let routeTitle: String
-    let routeDescription: String
+    let title: String
+    let description: String
     
-//    static func getRoute() -> [(String, String)] {
-//
-//        var routes = []
-//
-//        for (routeTitle, routeDescription) in тут словарь {
-//            routesDescriptions.append((routeTitle, routeDescription))
-//        }
-//        return routesDescriptions
-//    }
+    static func getRoutes(from routesFromDataStore: [[String : Any]]) -> [Route] {
+        var routes: [Route] = []
+        
+        for routeFromDataStore in routesFromDataStore {
+            let route = Route(
+                title: routeFromDataStore["title"] as! String,
+                description: routeFromDataStore["description"] as! String
+            )
+            routes.append(route)
+        }
+        
+        return routes
+    }
 }
 
 

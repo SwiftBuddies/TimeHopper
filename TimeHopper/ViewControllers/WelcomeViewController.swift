@@ -12,9 +12,19 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var timeMachineButton: UIButton!
     
+    let universes = Universe.getUniverses(from: DataStore.shared.universes)
+    let nashMir = "Наш мир"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         timeMachineButton.layer.cornerRadius = 10
+        
+        print(universes)
+        
+        // это пример использования на последующих экранах, куда будет передаваться universes
+        // при клике на кнопку в массиве будет поиск элемента с тайтлом, равным тексту кнопки
+        let universe = universes.first(where: {$0.title == nashMir})
+        print(universe)
     }
 //
 //
