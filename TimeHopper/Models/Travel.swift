@@ -71,6 +71,23 @@ struct Year {
         
         return years
     }
+    
+    static func getYears(fromUniverse universeId: String, in universes: [Universe], andTime time: DataStore.Time) -> [Year] {
+        var years: [Year] = []
+        
+        for universe in universes {
+            guard universe.id == universeId else { continue }
+            
+            for location in universe.locations {
+                for year in location.years {
+                    guard year.time == time else { continue }
+                    years.append(year)
+                }
+            }
+        }
+        
+        return years
+    }
 }
 
 struct Route {
@@ -153,25 +170,6 @@ struct QuizAnswer {
         }
         
         return quizAnswers
-    }
-}
-
-struct QuizResult {
-    static func getYears(fromUniverse universeId: String, andTime time: DataStore.Time) -> [Year] {
-        var years: [Year] = []
-        
-        for universe in universes {
-            guard universe.id == universeId else { return }
-            
-            for location in universe.locations {
-                for year in location.years {
-                    guard year.time == time else { return }
-                    years.append(year)
-                }
-            }
-        }
-        
-        return years
     }
 }
 
