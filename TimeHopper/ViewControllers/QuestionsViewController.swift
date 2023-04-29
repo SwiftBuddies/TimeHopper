@@ -35,6 +35,11 @@ final class QuestionsViewController: UIViewController {
         currentUniverse = universes.first
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard let locationVC = segue.destination as? LocationViewController else { return }
+            locationVC.year = selectedYear
+    }
+    
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
         if questionTopicLabel.text == Question.universe.textQuestion {
@@ -51,12 +56,9 @@ final class QuestionsViewController: UIViewController {
         } else if questionTopicLabel.text == Question.year.textQuestion {
             if let year = currentUniverse?.locations[0].years.first(where: { $0.title == sender.currentTitle }) {
                 selectedYear = year
-                
-                // тут будет переход на location VC и передача selectedYear
-                
+               // performSegue(withIdentifier: "locationSegue", sender: self)
             }
         }
-        
         thirdAnswer.isHidden = true
     }
     
