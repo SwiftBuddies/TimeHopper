@@ -24,7 +24,6 @@ class WelcomeViewController: UIViewController {
         // это пример использования на последующих экранах, куда будет передаваться universes
         // при клике на кнопку в массиве будет поиск элемента с тайтлом, равным тексту кнопки
         let universe = universes.first(where: {$0.title == nashMir})
-        print(universe)
     }
 //
 //
