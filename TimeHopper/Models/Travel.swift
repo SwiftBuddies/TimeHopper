@@ -6,6 +6,7 @@
 //
 
 struct Universe {
+    let id: String
     let title: String
     let locations: [Location]
     let type: Question
@@ -15,6 +16,7 @@ struct Universe {
         
         for universeFromDataStore in universesFromDataStore {
             let universe = Universe(
+                id: universeFromDataStore["id"] as! String,
                 title: universeFromDataStore["title"] as! String,
                 locations: Location.getLocations(from: universeFromDataStore["locations"] as! [[String : Any]]), type: .universe
             )
@@ -26,6 +28,7 @@ struct Universe {
 }
 
 struct Location {
+    let id: String
     let title: String
     let years: [Year]
     let type: Question
@@ -35,6 +38,7 @@ struct Location {
         
         for locationFromDataStore in locationsFromDataStore {
             let location = Location(
+                id: locationFromDataStore["id"] as! String,
                 title: locationFromDataStore["title"] as! String,
                 years: Year.getYears(from: locationFromDataStore["years"] as! [[String : Any]]), type: .location
             )
@@ -46,6 +50,7 @@ struct Location {
 }
 
 struct Year {
+    let id: String
     let title: String
     let description: String
     let routes: [Route]
@@ -56,6 +61,7 @@ struct Year {
         
         for yearFromDataStore in yearsFromDataStore {
             let year = Year(
+                id: yearFromDataStore["id"] as! String,
                 title: yearFromDataStore["title"] as! String,
                 description: yearFromDataStore["description"] as! String,
                 routes: Route.getRoutes(from: yearFromDataStore["routes"] as! [[String : Any]]), type: .year
@@ -68,6 +74,7 @@ struct Year {
 }
 
 struct Route {
+    let id: String
     let title: String
     let description: String
     
@@ -76,6 +83,7 @@ struct Route {
         
         for routeFromDataStore in routesFromDataStore {
             let route = Route(
+                id: routeFromDataStore["id"] as! String,
                 title: routeFromDataStore["title"] as! String,
                 description: routeFromDataStore["description"] as! String
             )
@@ -139,15 +147,27 @@ enum QuizResult: Int {
 //MARK: - Team Model
 struct TeamMember {
     let name: String
-    let surname: String
-    let photo: String
+    let secondName: String
     let telegram: String
+    let photo: String
     
     var fullName: String {
-        "\(name) \(surname)"
+        "\(name) \(secondName)"
     }
     
-    static func getMember() {
-        // добавить метод
+    static func getTeamMembers(from membersFromDataStore: [[String : Any]]) -> [TeamMember] {
+        var members: [TeamMember] = []
+        
+        for memberFromDataStore in membersFromDataStore {
+            let member = TeamMember(
+                name: memberFromDataStore["name"] as! String,
+                secondName: memberFromDataStore["secondName"] as! String,
+                telegram: memberFromDataStore["telegram"] as! String,
+                photo: memberFromDataStore["photo"] as! String
+            )
+            members.append(member)
+        }
+        
+        return members
     }
 }
