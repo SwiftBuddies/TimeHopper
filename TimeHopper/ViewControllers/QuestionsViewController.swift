@@ -18,6 +18,7 @@ final class QuestionsViewController: UIViewController {
     let universes = Universe.getUniverses(from: DataStore.shared.universes)
     
     var currentUniverse: Universe?
+    var selectedYear: Year?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,6 @@ final class QuestionsViewController: UIViewController {
         secondAnswer.setTitle(universes.last?.title, for: .normal)
         
         currentUniverse = universes.first
-        
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
@@ -46,17 +46,23 @@ final class QuestionsViewController: UIViewController {
             questionTopicLabel.text = Question.location.textQuestion
             updateUI()
         } else if  questionTopicLabel.text == Question.location.textQuestion {
-            // Выбрали локацию и переходим к выбору года
             questionTopicLabel.text = Question.year.textQuestion
             updateUI()
+        } else if questionTopicLabel.text == Question.year.textQuestion {
+            if let year = currentUniverse?.locations[0].years.first(where: { $0.title == sender.currentTitle }) {
+                selectedYear = year
+                
+                // тут будет переход на location VC и передача selectedYear
+                
+            }
         }
+        
         thirdAnswer.isHidden = true
     }
     
-    @IBAction func secretTuttonPressed(_ sender: UIButton) {
-        //тут будет переход на квиз
+    @IBAction func secretButtonPressed(_ sender: UIButton) {
+        
     }
-    
 }
 
 // MARK: - Private Methods
