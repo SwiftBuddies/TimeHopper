@@ -27,7 +27,7 @@ final class QuizViewController: UIViewController {
     
     // MARK: - Private properties
     private var questionIndex = 0
-    private let questions = Question.getQuestions()
+    private let questions = Question.getQuestions() // вся логика предварительно прописанная, ожидает DataStore + Models
     private var answersChosen: [Answer] = []
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
