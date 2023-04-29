@@ -27,7 +27,8 @@ final class QuestionsViewController: UIViewController {
         secondAnswer.layer.cornerRadius = 10
         thirdAnswer.layer.cornerRadius = 10
         
-        
+        navigationController?.navigationBar.topItem?.backButtonTitle = "Ой, нет"
+
         questionTopicLabel.text = Question.universe.textQuestion
         firstAnswer.setTitle(universes.first?.title, for: .normal)
         secondAnswer.setTitle(universes.last?.title, for: .normal)
