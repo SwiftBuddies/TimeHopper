@@ -24,14 +24,29 @@ final class QuestionsViewController: UIViewController {
         secondAnswer.layer.cornerRadius = 10
         thirdAnswer.layer.cornerRadius = 10
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "Ой, нет",
-            style: .plain,
-            target: nil,
-            action: nil
-        )
-        
+        updateUI()
+    }
+    
+// MARK: - IB Actions
+    @IBAction func firstAnswerButtonPressed(_ sender: UIButton) {
+        thirdAnswer.isHidden = true
+        updateUI()
+    }
+    
+    @IBAction func secondAnswerButtonPressed(_ sender: UIButton) {
+        thirdAnswer.isHidden = true
+        updateUI()
+    }
+    
+    @IBAction func thirdAnswerButtonPressed(_ sender: Any) {
+    }
+}
+
+// MARK: - Private Methods
+extension QuestionsViewController {
+    private func updateUI() {
         firstAnswer.setTitle(universes[0].title, for: .normal)
         secondAnswer.setTitle(universes[1].title, for: .normal)
+        questionTopicLabel.text = Question.universe.textQuestion
     }
 }
