@@ -2,58 +2,16 @@
 //  Travel.swift
 //  TimeHopper
 //
-//  Created by Юлия Ястребова on 27.04.2023.
+//  Created by SwiftBuddies on 27.04.2023.
 //
 
-//struct Route {
-//
-//    let routeUniverse: String
-//    let routeLocation: String
-//    let routeYear: Int
-//    let routeName: String
-//    let routeDescription: String
-//   // let routeImage: String
-//
-//    static func getRoute() -> [Route] {
-//
-//        var routes: [Route] = []
-//
-//        let universes = DataStore.shared.universes
-//        let locations = DataStore.shared.locations
-//        let years = DataStore.shared.years
-//        let routeNames = DataStore.shared.routeNames
-//        let routeDescriptions = DataStore.shared.routeDescriptions
-//
-//        // тут не уверена
-//        let iterationCount = max(
-//            universes.count,
-//            locations.count,
-//            years.count,
-//            routeNames.count,
-//            routeDescriptions.count
-//        )
-//
-//        for i in 0..<iterationCount {
-//            let route = Route(
-//                routeUniverse: universes[i],
-//                routeLocation: locations[i],
-//                routeYear: years[i],
-//                routeName: routeNames[i],
-//                routeDescription: routeDescriptions[i]
-//               // routeImage: "" // сомневаюсь как ту правильно
-//                )
-//            routes.append(route)
-//        }
-//
-//        return routes
-//    }
-//}
-
+//MARK: - Route Model
 struct Universe {
     let id: String
     let title: String
     let locations: [Location]
-    
+    let type: Question
+
     static func getUniverses(from universesFromDataStore: [[String : Any]]) -> [Universe] {
         var universes: [Universe] = []
         
@@ -61,7 +19,7 @@ struct Universe {
             let universe = Universe(
                 id: universeFromDataStore["id"] as! String,
                 title: universeFromDataStore["title"] as! String,
-                locations: Location.getLocations(from: universeFromDataStore["locations"] as! [[String : Any]])
+                locations: Location.getLocations(from: universeFromDataStore["locations"] as! [[String : Any]]), type: .universe
             )
             universes.append(universe)
         }
@@ -74,6 +32,7 @@ struct Location {
     let id: String
     let title: String
     let years: [Year]
+    let type: Question
     
     static func getLocations(from locationsFromDataStore: [[String : Any]]) -> [Location] {
         var locations: [Location] = []
@@ -82,7 +41,7 @@ struct Location {
             let location = Location(
                 id: locationFromDataStore["id"] as! String,
                 title: locationFromDataStore["title"] as! String,
-                years: Year.getYears(from: locationFromDataStore["years"] as! [[String : Any]])
+                years: Year.getYears(from: locationFromDataStore["years"] as! [[String : Any]]), type: .location
             )
             locations.append(location)
         }
@@ -94,8 +53,10 @@ struct Location {
 struct Year {
     let id: String
     let title: String
+    let time: DataStore.Time
     let description: String
     let routes: [Route]
+    let type: Question
     
     static func getYears(from yearsFromDataStore: [[String : Any]]) -> [Year] {
         var years: [Year] = []
@@ -104,10 +65,28 @@ struct Year {
             let year = Year(
                 id: yearFromDataStore["id"] as! String,
                 title: yearFromDataStore["title"] as! String,
+                time: yearFromDataStore["time"] as! DataStore.Time,
                 description: yearFromDataStore["description"] as! String,
-                routes: Route.getRoutes(from: yearFromDataStore["routes"] as! [[String : Any]])
+                routes: Route.getRoutes(from: yearFromDataStore["routes"] as! [[String : Any]]), type: .year
             )
             years.append(year)
+        }
+        
+        return years
+    }
+    
+    static func getYears(fromUniverse universeId: String, in universes: [Universe], andTime time: DataStore.Time) -> [Year] {
+        var years: [Year] = []
+        
+        for universe in universes {
+            guard universe.id == universeId else { continue }
+            
+            for location in universe.locations {
+                for year in location.years {
+                    guard year.time == time else { continue }
+                    years.append(year)
+                }
+            }
         }
         
         return years
@@ -135,7 +114,6 @@ struct Route {
     }
 }
 
-
 enum Question {
     case universe
     case location
@@ -155,33 +133,46 @@ enum Question {
 
 //MARK: - Quiz Model
 struct QuizQuestion {
-    let quizTitle: String
-    let quizAnswers: [QuizAnswer]
+    let id: String
+    let title: String
+    let answers: [QuizAnswer]
     
-    static func getQuizQuestion() -> [QuizQuestion] {
-        [] //тут надо переписать метод используя DataStore
+    static func getQuizQuestions(from quizQuestionsFromDataStore: [[String : Any]]) -> [QuizQuestion] {
+        var quizQuestions: [QuizQuestion] = []
+        
+        for quizQuestionFromDataStore in quizQuestionsFromDataStore {
+            let quizQuestion = QuizQuestion(
+                id: quizQuestionFromDataStore["id"] as! String,
+                title: quizQuestionFromDataStore["title"] as! String,
+                answers: QuizAnswer.getQuizAnswers(from: quizQuestionFromDataStore["answers"] as! [[String : Any]])
+            )
+            quizQuestions.append(quizQuestion)
+        }
+        
+        return quizQuestions
     }
 }
 
 struct QuizAnswer {
+    let id: String
     let title: String
-    let time: QuizResult
-}
-
-enum QuizResult: Int {
-    case humanPast = 1990// год.random!!!
-    case humanFuture = 1991
-    case alternativeWorld = 1992
+    let universeId: String
+    let time: DataStore.Time
     
-    var definition: String {
-        switch self {
-        case .humanPast:
-            return "page past"
-        case .humanFuture:
-            return "page future"
-        case .alternativeWorld:
-            return "page alternative world" //model random!!!
+    static func getQuizAnswers(from quizAnswersFromDataStore: [[String : Any]]) -> [QuizAnswer] {
+        var quizAnswers: [QuizAnswer] = []
+        
+        for quizAnswerFromDataStore in quizAnswersFromDataStore {
+            let quizAnswer = QuizAnswer(
+                id: quizAnswerFromDataStore["id"] as! String,
+                title: quizAnswerFromDataStore["title"] as! String,
+                universeId: quizAnswerFromDataStore["universeId"] as! String,
+                time: quizAnswerFromDataStore["time"] as! DataStore.Time
+            )
+            quizAnswers.append(quizAnswer)
         }
+        
+        return quizAnswers
     }
 }
 

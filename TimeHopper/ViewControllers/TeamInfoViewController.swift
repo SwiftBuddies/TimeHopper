@@ -9,15 +9,35 @@ import UIKit
 
 class TeamInfoViewController: UIViewController {
     
-    @IBOutlet var juliaKazarinaPhoto: UIImageView!
-    @IBOutlet var elenaDemchenkoPhoto: UIImageView!
-    @IBOutlet var pavelKarunnyjPhoto: UIImageView!
-    @IBOutlet var elenaSharipovaPhoto: UIImageView!
+    @IBOutlet var membersPhotos: [UIImageView]!
+    @IBOutlet var membersNames: [UILabel]!
+    @IBOutlet var membersTgNames: [UILabel]!
     
-    override func viewWillLayoutSubviews() {
-        juliaKazarinaPhoto.layer.cornerRadius = juliaKazarinaPhoto.frame.width / 2
-        elenaDemchenkoPhoto.layer.cornerRadius = elenaDemchenkoPhoto.frame.width / 2
-        pavelKarunnyjPhoto.layer.cornerRadius = pavelKarunnyjPhoto.frame.width / 2
+    
+    let members = TeamMember.getTeamMembers(from: DataStore.shared.team)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        updateTeamInfo()
     }
     
+    override func viewWillLayoutSubviews() {
+
+        for (index, _) in members.enumerated() {
+            membersPhotos[index].layer.cornerRadius = membersPhotos[index].frame.width / 2
+        }
+    }
+    
+}
+
+//MARK: - Private func
+extension TeamInfoViewController {
+    private func updateTeamInfo() {
+        for (index, member) in members.enumerated() {
+            membersNames[index].text = member.fullName
+            membersTgNames[index].text = member.telegram
+            membersPhotos[index].image = UIImage(named: member.photo)
+        }
+    }
 }
