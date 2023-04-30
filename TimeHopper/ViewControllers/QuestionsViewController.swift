@@ -20,6 +20,7 @@ final class QuestionsViewController: UIViewController {
     var currentUniverse: Universe?
     var selectedYear: Year?
     var selectedLocation: Location?
+    var selectedLocationIndex: Int?
     var userName: String?
     
     override func viewDidLoad() {
@@ -66,13 +67,15 @@ final class QuestionsViewController: UIViewController {
             updateUI(selectedLocationIndex: 0)
         } else if  questionTopicLabel.text == Question.location.textQuestion {
             questionTopicLabel.text = Question.year.textQuestion
-            let selectedLocationIndex = sender == firstAnswer ? 0 : 1
+            selectedLocationIndex = sender == firstAnswer ? 0 : 1
             updateUI(selectedLocationIndex: selectedLocationIndex)
             questionTopicLabel.text = Question.year.textQuestion
         } else if questionTopicLabel.text == Question.year.textQuestion {
-            if let year = currentUniverse?.locations[0].years.first(where: { $0.title == sender.currentTitle }) {
-                selectedYear = year
-                performSegue(withIdentifier: "locationSegue", sender: self)
+            if let selectedLocationIndex = selectedLocationIndex, let location = currentUniverse?.locations[selectedLocationIndex] {
+                if let year = location.years.first(where: { $0.title == sender.currentTitle }) {
+                    selectedYear = year
+                    performSegue(withIdentifier: "locationSegue", sender: self)
+                }
             }
         }
         thirdAnswer.isHidden = true
