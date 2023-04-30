@@ -9,8 +9,6 @@ import UIKit
 
 final class QuizViewController: UIViewController {
     
-    var universes: [Universe]! //тут передала вселенные
-
     // MARK: - IBOutlets
     @IBOutlet var questionProgressView: UIProgressView!
     @IBOutlet var questionLabel: UILabel!
@@ -26,6 +24,9 @@ final class QuizViewController: UIViewController {
     @IBOutlet var secondSwitch: UISwitch!
     @IBOutlet var thirdSwitch: UISwitch!
     @IBOutlet var fourthSwitch: UISwitch!
+    
+    // MARK: - Public Properties
+    var universes: [Universe]!
     
     // MARK: - Private properties
     private var questionIndex = 0
@@ -83,13 +84,13 @@ private extension QuizViewController {
         for (index, answer) in currentAnswers.enumerated() {
             switch index {
             case 0:
-                firstAnswerLabel.text = answer.title
+                firstAnswerLabel?.text = answer.title
             case 1:
-                secondAnswerLabel.text = answer.title
+                secondAnswerLabel?.text = answer.title
             case 2:
-                thirdAnswerLabel.text = answer.title
+                thirdAnswerLabel?.text = answer.title
             default:
-                fourthAnswerLabel.text = answer.title
+                fourthAnswerLabel?.text = answer.title
             }
         }
         resetSwitches()
@@ -113,8 +114,15 @@ private extension QuizViewController {
             return
         }
         
-        let mostChosenWorld = calculateAnswers()
-        performSegue(withIdentifier: "showLocationView", sender: mostChosenWorld) // или какой переход?
+        let mostChosenTime = calculateAnswers()
+        performSegue(withIdentifier: "Location", sender: mostChosenTime) // или какой переход?
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "showResult",
+               let guideViewController = segue.destination as? LocationViewController,
+               let mostCommonTime = sender as? DataStore.Time {
+//                guideViewController.selectedTime = mostChosenTime // добавить в гид selectedTime
+            }
+        }
     }
 }
-
+    
