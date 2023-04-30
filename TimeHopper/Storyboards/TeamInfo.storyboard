@@ -18,25 +18,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BW0-hF-mGV">
-                                <rect key="frame" x="30" y="90" width="260" height="70.5"/>
+                                <rect key="frame" x="30" y="90" width="260" height="80.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="81y-Af-XVn">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="70.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="80.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-fm-BFm">
-                                                <rect key="frame" x="50" y="0.5" width="20" height="19"/>
+                                                <rect key="frame" x="45" y="0.5" width="30" height="29"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="h7x-fm-BFm" secondAttribute="height" multiplier="1:1" id="Ou2-of-4wC"/>
+                                                    <constraint firstAttribute="height" constant="30" id="sM5-oE-Pri"/>
+                                                    <constraint firstAttribute="width" constant="30" id="xnz-X1-aBK"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXC-nM-Ygg">
-                                                <rect key="frame" x="0.0" y="30" width="120" height="16"/>
+                                                <rect key="frame" x="0.0" y="40" width="120" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afs-bS-IGc">
-                                                <rect key="frame" x="18.5" y="56" width="83" height="14.5"/>
+                                                <rect key="frame" x="18.5" y="66" width="83" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -44,22 +45,23 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-FF-tiS">
-                                        <rect key="frame" x="140" y="0.0" width="120" height="70.5"/>
+                                        <rect key="frame" x="140" y="0.0" width="120" height="80.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Ft-QA-9Ef">
-                                                <rect key="frame" x="50" y="0.5" width="20" height="19"/>
+                                                <rect key="frame" x="45" y="0.5" width="30" height="29"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="2Ft-QA-9Ef" secondAttribute="height" multiplier="1:1" id="o8D-48-yAd"/>
+                                                    <constraint firstAttribute="height" constant="30" id="OlT-wb-zwD"/>
+                                                    <constraint firstAttribute="width" constant="30" id="c66-66-mnd"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf1-mI-sga">
-                                                <rect key="frame" x="0.0" y="30" width="120" height="16"/>
+                                                <rect key="frame" x="0.0" y="40" width="120" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8I-y4-NrC">
-                                                <rect key="frame" x="18.5" y="56" width="83" height="14.5"/>
+                                                <rect key="frame" x="18.5" y="66" width="83" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -69,25 +71,26 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ixG-eG-eib">
-                                <rect key="frame" x="30" y="210.5" width="260" height="70.5"/>
+                                <rect key="frame" x="30" y="220.5" width="260" height="80.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lqv-Mc-ebV">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="70.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="80.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-MQ-3ae">
-                                                <rect key="frame" x="50" y="0.5" width="20" height="19"/>
+                                                <rect key="frame" x="45" y="0.5" width="30" height="29"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="0pF-MQ-3ae" secondAttribute="height" multiplier="1:1" id="0LB-im-7fx"/>
+                                                    <constraint firstAttribute="width" constant="30" id="Awc-hc-vd6"/>
+                                                    <constraint firstAttribute="height" constant="30" id="Zku-iF-oI6"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeP-uT-cb8">
-                                                <rect key="frame" x="0.0" y="30" width="120" height="16"/>
+                                                <rect key="frame" x="0.0" y="40" width="120" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDN-dg-xzC">
-                                                <rect key="frame" x="18.5" y="56" width="83" height="14.5"/>
+                                                <rect key="frame" x="18.5" y="66" width="83" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -95,22 +98,23 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qbM-L6-zRJ">
-                                        <rect key="frame" x="140" y="0.0" width="120" height="70.5"/>
+                                        <rect key="frame" x="140" y="0.0" width="120" height="80.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ICM-DL-1i4">
-                                                <rect key="frame" x="50" y="0.5" width="20" height="19"/>
+                                                <rect key="frame" x="45" y="0.5" width="30" height="29"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="ICM-DL-1i4" secondAttribute="height" multiplier="1:1" id="WbN-0T-UVD"/>
+                                                    <constraint firstAttribute="width" constant="30" id="TxG-Ja-sEl"/>
+                                                    <constraint firstAttribute="height" constant="30" id="p8z-cC-ZDX"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7c-LI-PHc">
-                                                <rect key="frame" x="0.0" y="30" width="120" height="16"/>
+                                                <rect key="frame" x="0.0" y="40" width="120" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telegramName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0l-yg-bKe">
-                                                <rect key="frame" x="18.5" y="56" width="83" height="14.5"/>
+                                                <rect key="frame" x="18.5" y="66" width="83" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -144,10 +148,18 @@
                     <navigationItem key="navigationItem" title="SwiftBuddies" id="d2z-bB-uxG"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="elenaDemchenkoPhoto" destination="2Ft-QA-9Ef" id="3Fj-MM-xup"/>
-                        <outlet property="elenaSharipovaPhoto" destination="ICM-DL-1i4" id="0dp-rK-Fn7"/>
-                        <outlet property="juliaKazarinaPhoto" destination="h7x-fm-BFm" id="BKw-Po-QQJ"/>
-                        <outlet property="pavelKarunnyjPhoto" destination="0pF-MQ-3ae" id="hpX-Y6-al4"/>
+                        <outletCollection property="membersPhotos" destination="h7x-fm-BFm" collectionClass="NSMutableArray" id="Trt-A6-Izt"/>
+                        <outletCollection property="membersPhotos" destination="2Ft-QA-9Ef" collectionClass="NSMutableArray" id="uCP-js-dI5"/>
+                        <outletCollection property="membersPhotos" destination="ICM-DL-1i4" collectionClass="NSMutableArray" id="S1c-6L-EJq"/>
+                        <outletCollection property="membersPhotos" destination="0pF-MQ-3ae" collectionClass="NSMutableArray" id="6VB-Gx-KxE"/>
+                        <outletCollection property="membersNames" destination="oXC-nM-Ygg" collectionClass="NSMutableArray" id="MDk-uA-1g4"/>
+                        <outletCollection property="membersNames" destination="bf1-mI-sga" collectionClass="NSMutableArray" id="Ddd-dI-Pmo"/>
+                        <outletCollection property="membersNames" destination="OeP-uT-cb8" collectionClass="NSMutableArray" id="YJj-6P-zDt"/>
+                        <outletCollection property="membersNames" destination="d7c-LI-PHc" collectionClass="NSMutableArray" id="mj1-sV-8YG"/>
+                        <outletCollection property="membersTgNames" destination="Afs-bS-IGc" collectionClass="NSMutableArray" id="jqN-sZ-E67"/>
+                        <outletCollection property="membersTgNames" destination="M8I-y4-NrC" collectionClass="NSMutableArray" id="nCS-D4-e1P"/>
+                        <outletCollection property="membersTgNames" destination="J0l-yg-bKe" collectionClass="NSMutableArray" id="ik6-Vb-5LV"/>
+                        <outletCollection property="membersTgNames" destination="hDN-dg-xzC" collectionClass="NSMutableArray" id="wrV-bB-xNH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
