@@ -13,17 +13,17 @@
         <!--Начинаем -->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="quiz" id="Y6W-OH-hqX" customClass="QuizViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="QuizViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3VF-de-TIh">
-                                <rect key="frame" x="0.0" y="143" width="390" height="4"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="4"/>
                                 <color key="tintColor" red="0.4588235021" green="0.49019610879999997" blue="0.67450982329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="fSH-nb-4lf" userLabel="Quiz Stack">
-                                <rect key="frame" x="16" y="160.66666666666666" width="358" height="357.66666666666674"/>
+                                <rect key="frame" x="16" y="64.666666666666657" width="358" height="357.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Если бы ты мог выбрать свою роль в прошлом, кем бы ты хотел быть?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-Cn-SHd">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="45.333333333333336"/>
@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G6f-jg-7I3" userLabel="1">
-                                        <rect key="frame" x="0.0" y="64.333333333333343" width="358" height="40.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="64.333333333333329" width="358" height="40.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Изобретателем, меняющим мир своими открытиями " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wic-7u-N6j">
                                                 <rect key="frame" x="0.0" y="0.0" width="301" height="40.666666666666664"/>
@@ -46,7 +46,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VYw-hR-mMA" userLabel="2">
-                                        <rect key="frame" x="0.0" y="124.00000000000004" width="358" height="40.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="123.99999999999999" width="358" height="40.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Героем эпической битвы, сражающимся за свой народ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfM-hn-PFe">
                                                 <rect key="frame" x="0.0" y="0.0" width="301" height="40.666666666666664"/>
@@ -55,12 +55,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kF3-dq-qOR">
-                                                <rect key="frame" x="309" y="4.6666666666666288" width="51" height="31"/>
+                                                <rect key="frame" x="309" y="4.6666666666666856" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UHd-XQ-ZlP" userLabel="3">
-                                        <rect key="frame" x="0.0" y="183.66666666666666" width="358" height="61"/>
+                                        <rect key="frame" x="0.0" y="183.66666666666669" width="358" height="61"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Мудрым философом, задумывающимся над вечными вопросами" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLC-0A-8Zp">
                                                 <rect key="frame" x="0.0" y="0.0" width="301" height="61"/>
@@ -69,7 +69,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1w-Xz-mrm">
-                                                <rect key="frame" x="309" y="15" width="51" height="31"/>
+                                                <rect key="frame" x="309" y="14.999999999999972" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -88,7 +88,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8y-3k-e71">
-                                        <rect key="frame" x="0.0" y="323.33333333333337" width="358" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="323.33333333333331" width="358" height="34.333333333333314"/>
                                         <color key="tintColor" name="AccentColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить">
@@ -127,7 +127,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922.32558139534888" y="-14.806866952789701"/>
+            <point key="canvasLocation" x="1823" y="-16"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mco-r4-J1U">
+            <objects>
+                <viewController storyboardIdentifier="quiz" id="daB-46-HQT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QPK-S0-mNI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in progress..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YQ-bs-k5h">
+                                <rect key="frame" x="98.333333333333329" y="395.66666666666669" width="193.33333333333343" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sam-9I-27x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8YQ-bs-k5h" firstAttribute="centerY" secondItem="QPK-S0-mNI" secondAttribute="centerY" id="7fY-KF-C9O"/>
+                            <constraint firstItem="8YQ-bs-k5h" firstAttribute="centerX" secondItem="QPK-S0-mNI" secondAttribute="centerX" id="DUb-qN-cEZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z22-SV-Jcj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgU-dA-kIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="-16.350710900473931"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sf8-RN-2IY">
@@ -141,12 +169,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="0Di-2G-70V"/>
+                        <segue destination="daB-46-HQT" kind="show" id="Rll-JR-BHC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hb-mn-5Yf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69" y="-15"/>
+            <point key="canvasLocation" x="-302" y="-16"/>
         </scene>
     </scenes>
     <resources>
