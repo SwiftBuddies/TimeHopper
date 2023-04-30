@@ -32,24 +32,7 @@ final class QuizViewController: UIViewController {
     private var currentAnswers: [QuizAnswer] {
         quizQuestions[questionIndex].answers
     }
-    
-    private var answerChosen: [QuizAnswer] = []
-    
-    /*
-     private var questionIndex = 0
-     
-     private var quizQuestions: [QuizQuestion] {
-     let dictionaries = QuizDataStore.shared.quizQuestions
-     return dictionaries.map { QuizQuestion(dictionary: $0) }
-     }
-     
-     private var answersChosen: [QuizAnswer] = []
-     
-     private var currentAnswers: [QuizAnswer] {
-     quizQuestions[questionIndex].answers
-     }
-     */
-    
+    private var answersChosen: [QuizAnswer] = []
     
     // MARK: -  View Life Cycle
     override func viewDidLoad() {
@@ -61,7 +44,7 @@ final class QuizViewController: UIViewController {
     @IBAction func answerButtonPressed(_ sender: Any) {
         for (index, answerSwitch) in [firstSwitch, secondSwitch, thirdSwitch, fourthSwitch].enumerated() {
             if answerSwitch?.isOn == true {
-                answerChosen.append(currentAnswers[index])
+                answersChosen.append(currentAnswers[index])
             }
         }
         nextQuestion()
@@ -110,16 +93,15 @@ private extension QuizViewController {
         resetSwitches()
     }
     
-//    func calculateAnswers() -> Time {
-//        var timeCounts: [Time: Int] = [:]
-//
-//        for answer in selectedAnswers {
-//            let time = answer.time
-//            timeCounts[time] = (timeCounts[time] ?? 0) + 1
-//        }
-//        return timeCounts.max { a, b in a.value < b.value }.key
-//
-//    }
+    func calculateAnswers() -> String {
+        var worldCounts: [String: Int] = ["human": 0, "alternative": 0]
+        
+        for answer in answersChosen {
+            let universeId = answer.universeId
+            worldCounts[universeId] = (worldCounts[universeId] ?? 0) + 1
+        }
+        return worldCounts.max { a, b in a.value < b.value }?.key ?? "human"
+    }
     
     func nextQuestion() {
         questionIndex += 1
@@ -129,17 +111,8 @@ private extension QuizViewController {
             return
         }
         
-//        let mostChosenTime = calculateAnswers()
-        //добавить идентификатор в приветственную страницу путеводителя?
-        performSegue(withIdentifier: "showResult", sender: nil) // или какой переход?
-        
-        //        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //            if segue.identifier == "showResult",
-        //               let guideViewController = segue.destination as? GuideViewController,
-        //               let mostCommonTime = sender as? Time {
-        //                guideViewController.selectedTime = mostChosenTime
-        //            }
-        //        }
-        
+        let mostChosenWorld = calculateAnswers()
+        performSegue(withIdentifier: "showLocationView", sender: mostChosenWorld) // или какой переход?
     }
 }
+
