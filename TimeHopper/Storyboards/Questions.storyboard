@@ -81,7 +81,7 @@
                         <outlet property="questionTopicLabel" destination="VDE-cg-KWS" id="DvY-Fk-cE8"/>
                         <outlet property="secondAnswer" destination="0Om-NP-jh1" id="ouZ-sw-caQ"/>
                         <outlet property="thirdAnswer" destination="xPq-rw-hU7" id="TmX-rT-upo"/>
-                        <segue destination="jY7-fH-01k" kind="presentation" identifier="locationSegue" modalPresentationStyle="fullScreen" id="vR1-Yc-RGf"/>
+                        <segue destination="jY7-fH-01k" kind="show" identifier="locationSegue" id="dDZ-v3-DLT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

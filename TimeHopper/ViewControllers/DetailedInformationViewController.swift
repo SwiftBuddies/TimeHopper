@@ -15,8 +15,12 @@ final class DetailedInformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationItem.hidesBackButton = true
+        tabBarController?.navigationItem.hidesBackButton = true
         navigationItem.title = route.title
         detailedInformation.text = route.description
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        tabBarController?.navigationItem.hidesBackButton = false
     }
 }
