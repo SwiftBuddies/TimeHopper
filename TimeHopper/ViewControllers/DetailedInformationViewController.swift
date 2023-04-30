@@ -11,11 +11,11 @@ final class DetailedInformationViewController: UIViewController {
     
     @IBOutlet var detailedInformation: UILabel!
     
-    var universe: Universe!
+    var route: Route!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = universe.title
-        detailedInformation.text = universe.locations.description
+//        navigationItem.title = selectedYear.routes
+        detailedInformation.text = route.description
     }
 }

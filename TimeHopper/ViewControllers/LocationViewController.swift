@@ -10,6 +10,7 @@ import UIKit
 final class LocationViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
+    @IBOutlet var navigationBar: UINavigationItem!
     
     var selectedYear: Year!
     var userName: String!
@@ -17,11 +18,7 @@ final class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "\(userName ?? ""), ты в \(selectedYear.title) в \(selectedYear.time)"
+        navigationBar.title = "\(userName ?? ""), ты в \(selectedYear.time) в \(selectedYear.title)"
         welcomeLabel.text = selectedYear.description
     }
-    
-
-    
-
 }

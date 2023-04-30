@@ -42,7 +42,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Y6W-OH-hqX" kind="show" id="nJ2-zS-mWR"/>
+                                    <segue destination="Y6W-OH-hqX" kind="show" identifier="" id="nJ2-zS-mWR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -110,40 +110,53 @@
         <!--Локация-->
         <scene sceneID="IuB-Zz-I95">
             <objects>
-                <viewController storyboardIdentifier="location" id="AKO-FI-6tT" customClass="LocationViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AKO-FI-6tT" customClass="LocationViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gX5-JF-A1x">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfY-2g-9p9">
-                                <rect key="frame" x="16" y="79" width="361" height="670"/>
+                                <rect key="frame" x="16" y="141" width="361" height="608"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6X-YI-sXS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZlG-cM-lRM"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="m0v-BT-zRR"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fmd-Mg-bWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bfY-2g-9p9" firstAttribute="top" secondItem="fmd-Mg-bWS" secondAttribute="top" constant="20" id="BXf-I8-F9O"/>
-                            <constraint firstItem="fmd-Mg-bWS" firstAttribute="bottom" secondItem="bfY-2g-9p9" secondAttribute="bottom" constant="20" id="kt1-cb-j7X"/>
+                            <constraint firstItem="bfY-2g-9p9" firstAttribute="top" secondItem="O6X-YI-sXS" secondAttribute="bottom" constant="38" id="9Co-C0-xkZ"/>
+                            <constraint firstItem="O6X-YI-sXS" firstAttribute="top" secondItem="fmd-Mg-bWS" secondAttribute="top" id="Bv4-MQ-3DE"/>
+                            <constraint firstItem="fmd-Mg-bWS" firstAttribute="bottom" secondItem="bfY-2g-9p9" secondAttribute="bottom" constant="20" id="dOT-kG-cLv"/>
+                            <constraint firstItem="O6X-YI-sXS" firstAttribute="trailing" secondItem="fmd-Mg-bWS" secondAttribute="trailing" id="grP-fM-h3s"/>
+                            <constraint firstItem="O6X-YI-sXS" firstAttribute="leading" secondItem="fmd-Mg-bWS" secondAttribute="leading" id="rXm-7F-4I4"/>
                             <constraint firstItem="fmd-Mg-bWS" firstAttribute="trailing" secondItem="bfY-2g-9p9" secondAttribute="trailing" constant="16" id="smR-S1-aZ5"/>
                             <constraint firstItem="bfY-2g-9p9" firstAttribute="leading" secondItem="fmd-Mg-bWS" secondAttribute="leading" constant="16" id="vYJ-o5-hbD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Локация" image="location" catalog="system" id="Kub-St-fjo"/>
                     <connections>
+                        <outlet property="navigationBar" destination="m0v-BT-zRR" id="8Ox-uL-3ra"/>
                         <outlet property="welcomeLabel" destination="bfY-2g-9p9" id="ws7-8X-qom"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCQ-nL-eFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1755" y="-1077"/>
+            <point key="canvasLocation" x="1754.9618320610687" y="-1077.4647887323945"/>
         </scene>
         <!--Location Tab Bar Controller-->
         <scene sceneID="52b-uw-kaA">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qao-Vl-wD2" customClass="LocationTabBarController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="location" automaticallyAdjustsScrollViewInsets="NO" id="qao-Vl-wD2" customClass="LocationTabBarController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rll-f1-nH7">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
