@@ -24,13 +24,8 @@ final class WelcomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let questionsVC = segue.destination as? QuestionsViewController {
-            //            questionsVC.userName = nameTextField.text
-            //            questionsVC.universes = universes
-        } else {
-            guard let teamInfoVC = segue.destination as? TeamInfoViewController else { return }
-            //            teamInfoVC.memberTeam = memberTeam
-        }
+        guard let questionsVC = segue.destination as? QuestionsViewController else { return }
+//        questionsVC.userName = nameTextField.text
     }
     
     @IBAction func timeMachineButton(_ sender: UIButton) {
@@ -40,9 +35,6 @@ final class WelcomeViewController: UIViewController {
         performSegue(withIdentifier: "showQuestionsVC", sender: nil)
     }
     
-    @IBAction func aboutTeamButton(_ sender: UIButton) {
-    }
-    
     private func  showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
@@ -50,7 +42,7 @@ final class WelcomeViewController: UIViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
-        }
+    }
 }
 
 extension WelcomeViewController: UITextFieldDelegate {
