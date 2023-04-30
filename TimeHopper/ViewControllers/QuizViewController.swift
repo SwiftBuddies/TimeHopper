@@ -35,7 +35,8 @@ final class QuizViewController: UIViewController {
     private var currentAnswers: [QuizAnswer] {
         quizQuestions[questionIndex].answers
     }
-    private var answersChosen: [QuizAnswer] = []
+    //  private var answersChosen: [QuizAnswer] = []
+    private var quizResult: [QuizResult] = []
     
     // MARK: -  View Life Cycle
     override func viewDidLoad() {
@@ -43,11 +44,20 @@ final class QuizViewController: UIViewController {
         updateUI()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowResult",
+           let locationVC = segue.destination as? LocationViewController,
+           let mostChosenTime = sender as? DataStore.Time {
+            locationVC.mostChosenTime = mostChosenTime
+        }
+    }
+    
     // MARK: - IBActions
     @IBAction func answerButtonPressed(_ sender: Any) {
         for (index, answerSwitch) in [firstSwitch, secondSwitch, thirdSwitch, fourthSwitch].enumerated() {
             if answerSwitch?.isOn == true {
-                answersChosen.append(currentAnswers[index])
+                let selectedAnswer = currentAnswers[index]
+                quizResult.append(QuizResult(time: selectedAnswer.time, universeId: selectedAnswer.universeId))
             }
         }
         nextQuestion()
@@ -58,7 +68,7 @@ final class QuizViewController: UIViewController {
 private extension QuizViewController {
     func resetSwitches() {
         for switches in [firstSwitch, secondSwitch, thirdSwitch, fourthSwitch] {
-            switches?.isOn = true
+            switches?.isOn = false
         }
     }
     
@@ -96,14 +106,16 @@ private extension QuizViewController {
         resetSwitches()
     }
     
-    func calculateAnswers() -> String {
-        var worldCounts: [String: Int] = ["human": 0, "alternative": 0]
+    func calculateMostChosenTime() -> DataStore.Time {
+        var timeCounts: [DataStore.Time: Int] = [:]
         
-        for answer in answersChosen {
-            let universeId = answer.universeId
-            worldCounts[universeId] = (worldCounts[universeId] ?? 0) + 1
+        for result in quizResult {
+            timeCounts[result.time, default: 0] += 1
         }
-        return worldCounts.max { a, b in a.value < b.value }?.key ?? "human"
+        
+        let mostChosenTime = timeCounts.max(by: { $0.value < $1.value })?.key ?? DataStore.Time.past
+        
+        return mostChosenTime
     }
     
     func nextQuestion() {
@@ -114,15 +126,7 @@ private extension QuizViewController {
             return
         }
         
-        let mostChosenTime = calculateAnswers()
-        performSegue(withIdentifier: "Location", sender: mostChosenTime) // или какой переход?
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "showResult",
-               let guideViewController = segue.destination as? LocationViewController,
-               let mostCommonTime = sender as? DataStore.Time {
-//                guideViewController.selectedTime = mostChosenTime // добавить в гид selectedTime
-            }
-        }
+        let mostChosenTime = calculateMostChosenTime()
+        performSegue(withIdentifier: "ShowResult", sender: mostChosenTime)
     }
 }
-    
