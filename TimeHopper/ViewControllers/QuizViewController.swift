@@ -35,6 +35,21 @@ final class QuizViewController: UIViewController {
     
     private var answerChosen: [QuizAnswer] = []
     
+    /*
+     private var questionIndex = 0
+     
+     private var quizQuestions: [QuizQuestion] {
+     let dictionaries = QuizDataStore.shared.quizQuestions
+     return dictionaries.map { QuizQuestion(dictionary: $0) }
+     }
+     
+     private var answersChosen: [QuizAnswer] = []
+     
+     private var currentAnswers: [QuizAnswer] {
+     quizQuestions[questionIndex].answers
+     }
+     */
+    
     
     // MARK: -  View Life Cycle
     override func viewDidLoad() {
@@ -95,6 +110,17 @@ private extension QuizViewController {
         resetSwitches()
     }
     
+//    func calculateAnswers() -> Time {
+//        var timeCounts: [Time: Int] = [:]
+//
+//        for answer in selectedAnswers {
+//            let time = answer.time
+//            timeCounts[time] = (timeCounts[time] ?? 0) + 1
+//        }
+//        return timeCounts.max { a, b in a.value < b.value }.key
+//
+//    }
+    
     func nextQuestion() {
         questionIndex += 1
         
@@ -102,7 +128,18 @@ private extension QuizViewController {
             updateUI()
             return
         }
+        
+//        let mostChosenTime = calculateAnswers()
         //добавить идентификатор в приветственную страницу путеводителя?
         performSegue(withIdentifier: "showResult", sender: nil) // или какой переход?
+        
+        //        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //            if segue.identifier == "showResult",
+        //               let guideViewController = segue.destination as? GuideViewController,
+        //               let mostCommonTime = sender as? Time {
+        //                guideViewController.selectedTime = mostChosenTime
+        //            }
+        //        }
+        
     }
 }
