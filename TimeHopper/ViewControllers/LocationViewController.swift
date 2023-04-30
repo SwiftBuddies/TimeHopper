@@ -9,6 +9,8 @@ import UIKit
 
 class LocationViewController: UIViewController {
 
+    var year: Year!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
