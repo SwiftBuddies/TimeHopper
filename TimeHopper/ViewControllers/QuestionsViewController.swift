@@ -19,6 +19,7 @@ final class QuestionsViewController: UIViewController {
     
     var currentUniverse: Universe?
     var selectedYear: Year?
+    var userName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ final class QuestionsViewController: UIViewController {
         thirdAnswer.layer.cornerRadius = 10
         
         navigationController?.navigationBar.topItem?.backButtonTitle = "Ой, нет"
-
+        
         questionTopicLabel.text = Question.universe.textQuestion
         firstAnswer.setTitle(universes.first?.title, for: .normal)
         secondAnswer.setTitle(universes.last?.title, for: .normal)
@@ -37,8 +38,12 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let locationVC = segue.destination as? LocationViewController else { return }
-            locationVC.year = selectedYear
+        if let quizVC = segue.destination as? QuizViewController {
+            quizVC.universes = universes
+        }  else if let locationVC = segue.destination as? LocationViewController {
+            locationVC.selectedYear = selectedYear
+            locationVC.userName = userName
+        }
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
@@ -57,15 +62,12 @@ final class QuestionsViewController: UIViewController {
         } else if questionTopicLabel.text == Question.year.textQuestion {
             if let year = currentUniverse?.locations[0].years.first(where: { $0.title == sender.currentTitle }) {
                 selectedYear = year
-               // performSegue(withIdentifier: "locationSegue", sender: self)
+                performSegue(withIdentifier: "locationSegue", sender: self)
             }
         }
         thirdAnswer.isHidden = true
     }
-    
-    @IBAction func secretButtonPressed(_ sender: UIButton) {
-        
-    }
+   
 }
 
 // MARK: - Private Methods

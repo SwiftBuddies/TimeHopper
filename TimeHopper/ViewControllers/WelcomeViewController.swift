@@ -25,7 +25,7 @@ final class WelcomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let questionsVC = segue.destination as? QuestionsViewController else { return }
-//        questionsVC.userName = nameTextField.text
+        questionsVC.userName = nameTextField.text ?? ""
     }
     
     @IBAction func timeMachineButton(_ sender: UIButton) {

@@ -28,7 +28,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="REq-kw-3m8"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VWi-1p-Wp5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Om-NP-jh1">
@@ -39,10 +39,10 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="215-15-q4h"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8A6-fy-dje"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YO4-q1-d1Q">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPq-rw-hU7">
                                         <rect key="frame" x="0.0" y="90" width="288" height="29"/>
                                         <color key="backgroundColor" systemColor="linkColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -50,7 +50,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Тайный путь"/>
                                         <connections>
-                                            <action selector="secretTuttonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JSe-n3-NUx"/>
+                                            <segue destination="Ki5-6t-161" kind="show" identifier="quizSegue" id="ElR-yr-cLY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -80,12 +80,33 @@
                         <outlet property="firstAnswer" destination="4Y2-6s-0EZ" id="jLB-Bc-kKI"/>
                         <outlet property="questionTopicLabel" destination="VDE-cg-KWS" id="DvY-Fk-cE8"/>
                         <outlet property="secondAnswer" destination="0Om-NP-jh1" id="ouZ-sw-caQ"/>
-                        <outlet property="thirdAnswer" destination="YO4-q1-d1Q" id="ghf-ug-mHE"/>
+                        <outlet property="thirdAnswer" destination="xPq-rw-hU7" id="TmX-rT-upo"/>
+                        <segue destination="jY7-fH-01k" kind="show" identifier="locationSegue" id="ZaA-iG-UTK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-819" y="-352"/>
+        </scene>
+        <!--location-->
+        <scene sceneID="ibd-jF-qsV">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="location" storyboardName="Location" referencedIdentifier="location" id="jY7-fH-01k" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mH4-gg-KRQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ej5-dq-poO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="-398"/>
+        </scene>
+        <!--quiz-->
+        <scene sceneID="bnm-oC-2MF">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="quiz" storyboardName="QuizStoryboard" referencedIdentifier="quiz" id="Ki5-6t-161" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dkj-pA-Hvn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6c-wa-Yba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="-74"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zv4-qi-VE8">

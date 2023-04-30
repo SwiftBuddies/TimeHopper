@@ -8,6 +8,8 @@
 import UIKit
 
 final class QuizViewController: UIViewController {
+    
+    var universes: [Universe]! //тут передала вселенные
 
     // MARK: - IBOutlets
     @IBOutlet var questionProgressView: UIProgressView!
