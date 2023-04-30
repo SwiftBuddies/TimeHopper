@@ -29,8 +29,6 @@ final class QuestionsViewController: UIViewController {
         secondAnswer.layer.cornerRadius = 10
         thirdAnswer.layer.cornerRadius = 10
         
-        navigationController?.navigationBar.topItem?.backButtonTitle = "Ой, нет"
-        
         questionTopicLabel.text = Question.universe.textQuestion
         firstAnswer.setTitle(universes.first?.title, for: .normal)
         secondAnswer.setTitle(universes.last?.title, for: .normal)
@@ -41,9 +39,19 @@ final class QuestionsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let quizVC = segue.destination as? QuizViewController {
             quizVC.universes = universes
-        }  else if let locationVC = segue.destination as? LocationViewController {
-            locationVC.selectedYear = selectedYear
-            locationVC.userName = userName
+        }
+        
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let localVC = viewController as? LocationViewController {
+                localVC.selectedYear = selectedYear
+                localVC.userName = userName
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let tableVC = navigationVC.topViewController as? LocationTableViewController else { return }
+                tableVC.selectedYear = selectedYear
+            }
         }
     }
     
@@ -69,7 +77,6 @@ final class QuestionsViewController: UIViewController {
         }
         thirdAnswer.isHidden = true
     }
-    
     
 }
 
