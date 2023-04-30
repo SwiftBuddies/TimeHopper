@@ -45,7 +45,7 @@ final class QuizViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowResult",
+        if segue.identifier == "location",
            let locationVC = segue.destination as? LocationViewController,
            let mostChosenTime = sender as? DataStore.Time {
             locationVC.mostChosenTime = mostChosenTime
@@ -127,6 +127,6 @@ private extension QuizViewController {
         }
         
         let mostChosenTime = calculateMostChosenTime()
-        performSegue(withIdentifier: "ShowResult", sender: mostChosenTime)
+        performSegue(withIdentifier: "location", sender: mostChosenTime)
     }
 }
