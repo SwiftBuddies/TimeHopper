@@ -18,7 +18,7 @@ final class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationBar.title = "\(userName ?? ""), ты в \(selectedYear.time) в \(selectedYear.title)"
+        navigationBar.title = "\(userName ?? ""), ты в \(selectedYear.title)"
         welcomeLabel.text = selectedYear.description
     }
 }

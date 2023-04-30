@@ -38,12 +38,10 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        if let quizVC = segue.destination as? QuizViewController {
-        //            quizVC.universes = universes
-        //        }  else if let locationVC = segue.destination as? LocationViewController {
-        //            locationVC.selectedYear = selectedYear
-        //            locationVC.userName = userName
-        //        }
+        if let quizVC = segue.destination as? QuizViewController {
+            quizVC.universes = universes
+        }
+        
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
         
@@ -79,7 +77,7 @@ final class QuestionsViewController: UIViewController {
         }
         thirdAnswer.isHidden = true
     }
-   
+    
 }
 
 // MARK: - Private Methods
