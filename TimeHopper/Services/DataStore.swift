@@ -178,9 +178,9 @@ final class DataStore {
                     "title": "Мудрым философом, задумывающимся над вечными вопросами",
                     "universeId": "1",
                     "time": Time.past
-                ]
+                ]  as [String : Any]
             ]
-        ], [
+    ] as [String : Any], [
             "id": "0.2",
             "title": "Твоя идеальная суббота в будущем выглядит так:",
             "answers": [[
@@ -203,7 +203,7 @@ final class DataStore {
                     "title": "Тихий вечер дома, наслаждаясь деликатесами с других планет",
                     "universeId": "1",
                     "time": Time.future
-                ]
+                ]  as [String : Any]
             ]
         ], [
             "id": "0.3",
@@ -228,7 +228,7 @@ final class DataStore {
                     "title": "Управлять временем, чтобы никогда не опаздывать на чудесные приключения",
                     "universeId": "1",
                     "time": Time.future
-                ]
+                ] as [String : Any]
             ]
         ], [
             "id": "0.4",
@@ -253,7 +253,7 @@ final class DataStore {
                     "title": "Космические станции, где живут представители разных цивилизаций",
                     "universeId": "1",
                     "time": Time.future
-                ]
+                ]  as [String : Any]
             ]
         ]
     ]
