@@ -28,7 +28,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="REq-kw-3m8"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VWi-1p-Wp5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Om-NP-jh1">
@@ -39,7 +39,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="215-15-q4h"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8A6-fy-dje"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPq-rw-hU7">
@@ -50,7 +50,8 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Тайный путь"/>
                                         <connections>
-                                            <segue destination="Ki5-6t-161" kind="show" id="ElR-yr-cLY"/>
+                                            <action selector="secretButtonPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xlc-iy-1rR"/>
+                                            <segue destination="Ki5-6t-161" kind="show" identifier="quizSegue" id="ElR-yr-cLY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -81,7 +82,7 @@
                         <outlet property="questionTopicLabel" destination="VDE-cg-KWS" id="DvY-Fk-cE8"/>
                         <outlet property="secondAnswer" destination="0Om-NP-jh1" id="ouZ-sw-caQ"/>
                         <outlet property="thirdAnswer" destination="xPq-rw-hU7" id="TmX-rT-upo"/>
-                        <segue destination="jY7-fH-01k" kind="show" identifier="location" id="ZaA-iG-UTK"/>
+                        <segue destination="jY7-fH-01k" kind="show" identifier="locationSegue" id="ZaA-iG-UTK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

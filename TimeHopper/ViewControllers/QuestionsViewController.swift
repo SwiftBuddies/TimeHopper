@@ -19,6 +19,7 @@ final class QuestionsViewController: UIViewController {
     
     var currentUniverse: Universe?
     var selectedYear: Year?
+    var userName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ final class QuestionsViewController: UIViewController {
         thirdAnswer.layer.cornerRadius = 10
         
         navigationController?.navigationBar.topItem?.backButtonTitle = "Ой, нет"
-
+        
         questionTopicLabel.text = Question.universe.textQuestion
         firstAnswer.setTitle(universes.first?.title, for: .normal)
         secondAnswer.setTitle(universes.last?.title, for: .normal)
@@ -37,12 +38,25 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let locationVC = segue.destination as? LocationViewController else { return }
-            locationVC.year = selectedYear
+        guard let quizVC = segue.destination as? QuizViewController else { return }
+        quizVC.universes = universes
+        
+//        guard let locationVC = segue.destination as? LocationTabBarController else { return }
+//        guard let viewControllers = locationVC.viewControllers else { return }
+//
+//        viewControllers.forEach { viewController in
+//            if let locationVC = viewController as? LocationTabBarController {
+//                locationVC.year = selectedYear
+//                locationVC.userName = userName
+//            } else if let navigationVC = viewController as? UINavigationController {
+//                guard let locationTableVC = navigationVC.topViewController as? LocationTableViewController else { return }
+//                locationTableVC.year = selectedYear
+//                locationTableVC.userName = userName
+//            }
+//        }
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        
         if questionTopicLabel.text == Question.universe.textQuestion {
             if sender == firstAnswer {
                 currentUniverse = universes[0]
@@ -57,14 +71,14 @@ final class QuestionsViewController: UIViewController {
         } else if questionTopicLabel.text == Question.year.textQuestion {
             if let year = currentUniverse?.locations[0].years.first(where: { $0.title == sender.currentTitle }) {
                 selectedYear = year
-               // performSegue(withIdentifier: "locationSegue", sender: self)
+                performSegue(withIdentifier: "locationSegue", sender: self)
             }
         }
         thirdAnswer.isHidden = true
     }
     
-    @IBAction func secretButtonPressed(_ sender: UIButton) {
-        
+    @IBAction func secretButtonPressed() {
+        performSegue(withIdentifier: "quizSegue", sender: nil)
     }
 }
 
