@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Cw-hY-hxW">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,7 +13,7 @@
         <!--Начинаем -->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="QuizStoryboard" id="Y6W-OH-hqX" customClass="QuizViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quiz" id="Y6W-OH-hqX" customClass="QuizViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,9 +114,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Начинаем " id="F3d-UD-RGE"/>
                     <connections>
-                        <outlet property="firstAnswerLabel" destination="Wic-7u-N6j" id="SAB-ol-xqh"/>
                         <outlet property="firstSwitch" destination="9jO-6K-vp4" id="1OO-p1-bIk"/>
-                        <outlet property="firstАnswerLabel" destination="Wic-7u-N6j" id="oID-ko-FdW"/>
                         <outlet property="fourthAnswerLabel" destination="02Y-n9-AZR" id="Tzp-jB-stm"/>
                         <outlet property="fourthSwitch" destination="VN9-3C-qv9" id="jC9-uj-xwR"/>
                         <outlet property="questionLabel" destination="hM2-Cn-SHd" id="Fzm-Ea-ybr"/>

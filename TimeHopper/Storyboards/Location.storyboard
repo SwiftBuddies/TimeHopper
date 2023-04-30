@@ -110,7 +110,7 @@
         <!--Локация-->
         <scene sceneID="IuB-Zz-I95">
             <objects>
-                <viewController id="AKO-FI-6tT" customClass="LocationViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="location" id="AKO-FI-6tT" customClass="LocationViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gX5-JF-A1x">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,7 @@
         <!--Location Tab Bar Controller-->
         <scene sceneID="52b-uw-kaA">
             <objects>
-                <tabBarController storyboardIdentifier="location" automaticallyAdjustsScrollViewInsets="NO" id="qao-Vl-wD2" customClass="LocationTabBarController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qao-Vl-wD2" customClass="LocationTabBarController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rll-f1-nH7">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
