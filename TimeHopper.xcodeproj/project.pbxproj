@@ -7,23 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05215D3929F92B4600602521 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05215D3829F92B4600602521 /* Questions.storyboard */; };
+		059061FC29F984B600986C5C /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059061FB29F984B600986C5C /* QuestionsViewController.swift */; };
+		6650C59C29F963FD00B45521 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650C59B29F963FC00B45521 /* QuizViewController.swift */; };
+		66823B8F29F9424F001CEFCE /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66823B8E29F9424F001CEFCE /* QuizStoryboard.storyboard */; };
+		685ECA6D29F9930C003F1B6B /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685ECA6C29F9930C003F1B6B /* Location.storyboard */; };
+		685ECA6F29F99927003F1B6B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ECA6E29F99927003F1B6B /* LocationViewController.swift */; };
+		685ECA7129F99966003F1B6B /* LocationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ECA7029F99966003F1B6B /* LocationTabBarController.swift */; };
+		685ECA7329F999FE003F1B6B /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ECA7229F999FE003F1B6B /* LocationTableViewController.swift */; };
+		685ECA7529F99A42003F1B6B /* DetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ECA7429F99A42003F1B6B /* DetailedInformationViewController.swift */; };
+		6C22A69F29F7FEF3001342A5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C22A69E29F7FEF3001342A5 /* DataStore.swift */; };
+		6C25A73129F90F0D00126A13 /* TeamInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C25A73029F90F0D00126A13 /* TeamInfo.storyboard */; };
 		6C25D85129F7F9E300A3D238 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85029F7F9E300A3D238 /* AppDelegate.swift */; };
 		6C25D85329F7F9E300A3D238 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */; };
-		6C25D85529F7F9E300A3D238 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85429F7F9E300A3D238 /* ViewController.swift */; };
+		6C25D85529F7F9E300A3D238 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D85429F7F9E300A3D238 /* WelcomeViewController.swift */; };
 		6C25D85829F7F9E300A3D238 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C25D85629F7F9E300A3D238 /* Main.storyboard */; };
 		6C25D85A29F7F9E600A3D238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C25D85929F7F9E600A3D238 /* Assets.xcassets */; };
 		6C25D85D29F7F9E600A3D238 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C25D85B29F7F9E600A3D238 /* LaunchScreen.storyboard */; };
+		6C8EE6EC29FC10F700ADFC03 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8EE6EB29FC10F700ADFC03 /* Travel.swift */; };
+		6CCC66BC29FBDA5800CAAA73 /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCC66BB29FBDA5800CAAA73 /* TeamInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05215D3829F92B4600602521 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
+		059061FB29F984B600986C5C /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		6650C59B29F963FC00B45521 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		66823B8E29F9424F001CEFCE /* QuizStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizStoryboard.storyboard; sourceTree = "<group>"; };
+		685ECA6C29F9930C003F1B6B /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		685ECA6E29F99927003F1B6B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		685ECA7029F99966003F1B6B /* LocationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTabBarController.swift; sourceTree = "<group>"; };
+		685ECA7229F999FE003F1B6B /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
+		685ECA7429F99A42003F1B6B /* DetailedInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInformationViewController.swift; sourceTree = "<group>"; };
+		6C22A69E29F7FEF3001342A5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		6C25A73029F90F0D00126A13 /* TeamInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamInfo.storyboard; sourceTree = "<group>"; };
 		6C25D84D29F7F9E300A3D238 /* TimeHopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeHopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C25D85029F7F9E300A3D238 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C25D85429F7F9E300A3D238 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C25D85429F7F9E300A3D238 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6C25D85729F7F9E300A3D238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C25D85929F7F9E600A3D238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C25D85C29F7F9E600A3D238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C25D85E29F7F9E600A3D238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8EE6EB29FC10F700ADFC03 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
+		6CCC66BB29FBDA5800CAAA73 /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +63,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C22A69C29F7FED9001342A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C8EE6EB29FC10F700ADFC03 /* Travel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6C22A69D29F7FEE3001342A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6C22A69E29F7FEF3001342A5 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6C22A6A029F7FF02001342A5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6C25D85629F7F9E300A3D238 /* Main.storyboard */,
+				6C25D85B29F7F9E600A3D238 /* LaunchScreen.storyboard */,
+				685ECA6C29F9930C003F1B6B /* Location.storyboard */,
+				05215D3829F92B4600602521 /* Questions.storyboard */,
+				66823B8E29F9424F001CEFCE /* QuizStoryboard.storyboard */,
+				6C25A73029F90F0D00126A13 /* TeamInfo.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6C22A6A129F7FF10001342A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6C25D85029F7F9E300A3D238 /* AppDelegate.swift */,
+				6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */,
+				6C25D85E29F7F9E600A3D238 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6C22A6A229F7FF20001342A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C25D85929F7F9E600A3D238 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6C25D84429F7F9E300A3D238 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +129,29 @@
 		6C25D84F29F7F9E300A3D238 /* TimeHopper */ = {
 			isa = PBXGroup;
 			children = (
-				6C25D85029F7F9E300A3D238 /* AppDelegate.swift */,
-				6C25D85229F7F9E300A3D238 /* SceneDelegate.swift */,
-				6C25D85429F7F9E300A3D238 /* ViewController.swift */,
-				6C25D85629F7F9E300A3D238 /* Main.storyboard */,
-				6C25D85929F7F9E600A3D238 /* Assets.xcassets */,
-				6C25D85B29F7F9E600A3D238 /* LaunchScreen.storyboard */,
-				6C25D85E29F7F9E600A3D238 /* Info.plist */,
+				6C25D86E29F7FE6900A3D238 /* ViewControllers */,
+				6C22A69C29F7FED9001342A5 /* Models */,
+				6C22A69D29F7FEE3001342A5 /* Services */,
+				6C22A6A029F7FF02001342A5 /* Storyboards */,
+				6C22A6A129F7FF10001342A5 /* App */,
+				6C22A6A229F7FF20001342A5 /* Resources */,
 			);
 			path = TimeHopper;
+			sourceTree = "<group>";
+		};
+		6C25D86E29F7FE6900A3D238 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C25D85429F7F9E300A3D238 /* WelcomeViewController.swift */,
+				685ECA6E29F99927003F1B6B /* LocationViewController.swift */,
+				685ECA7029F99966003F1B6B /* LocationTabBarController.swift */,
+				685ECA7229F999FE003F1B6B /* LocationTableViewController.swift */,
+				685ECA7429F99A42003F1B6B /* DetailedInformationViewController.swift */,
+				059061FB29F984B600986C5C /* QuestionsViewController.swift */,
+				6650C59B29F963FC00B45521 /* QuizViewController.swift */,
+				6CCC66BB29FBDA5800CAAA73 /* TeamInfoViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +213,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C25D85D29F7F9E600A3D238 /* LaunchScreen.storyboard in Resources */,
+				6C25A73129F90F0D00126A13 /* TeamInfo.storyboard in Resources */,
 				6C25D85A29F7F9E600A3D238 /* Assets.xcassets in Resources */,
+				05215D3929F92B4600602521 /* Questions.storyboard in Resources */,
+				66823B8F29F9424F001CEFCE /* QuizStoryboard.storyboard in Resources */,
 				6C25D85829F7F9E300A3D238 /* Main.storyboard in Resources */,
+				685ECA6D29F9930C003F1B6B /* Location.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +229,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C25D85529F7F9E300A3D238 /* ViewController.swift in Sources */,
+				685ECA6F29F99927003F1B6B /* LocationViewController.swift in Sources */,
+				6C25D85529F7F9E300A3D238 /* WelcomeViewController.swift in Sources */,
+				685ECA7129F99966003F1B6B /* LocationTabBarController.swift in Sources */,
+				685ECA7529F99A42003F1B6B /* DetailedInformationViewController.swift in Sources */,
+				6C8EE6EC29FC10F700ADFC03 /* Travel.swift in Sources */,
+				6CCC66BC29FBDA5800CAAA73 /* TeamInfoViewController.swift in Sources */,
+				059061FC29F984B600986C5C /* QuestionsViewController.swift in Sources */,
+				6650C59C29F963FD00B45521 /* QuizViewController.swift in Sources */,
+				6C22A69F29F7FEF3001342A5 /* DataStore.swift in Sources */,
 				6C25D85129F7F9E300A3D238 /* AppDelegate.swift in Sources */,
 				6C25D85329F7F9E300A3D238 /* SceneDelegate.swift in Sources */,
+				685ECA7329F999FE003F1B6B /* LocationTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +385,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeHopper/Info.plist;
+				INFOPLIST_FILE = TimeHopper/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Time Hooper";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +404,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = elena.sharipova.TimeHopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,15 +418,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeHopper/Info.plist;
+				INFOPLIST_FILE = TimeHopper/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Time Hooper";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +437,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = elena.sharipova.TimeHopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
