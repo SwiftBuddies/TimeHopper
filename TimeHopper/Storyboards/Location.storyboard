@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Локации-->
+        <!--Маршруты-->
         <scene sceneID="Wn0-t9-zj6">
             <objects>
                 <tableViewController id="Lz4-Ft-diJ" customClass="LocationTableViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                             <outlet property="delegate" destination="Lz4-Ft-diJ" id="4Iv-mA-IFB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Локации" id="J5A-75-GJH"/>
+                    <navigationItem key="navigationItem" title="Маршруты" id="J5A-75-GJH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fj-Ig-pNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
