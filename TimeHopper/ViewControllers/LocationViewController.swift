@@ -15,10 +15,7 @@ final class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-       print(selectedYear)
-        print(userName)
-
-        
+      
     }
     
 
