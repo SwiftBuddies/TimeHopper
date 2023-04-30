@@ -10,7 +10,8 @@ struct Universe {
     let id: String
     let title: String
     let locations: [Location]
-    
+    let type: Question
+
     static func getUniverses(from universesFromDataStore: [[String : Any]]) -> [Universe] {
         var universes: [Universe] = []
         
@@ -18,7 +19,7 @@ struct Universe {
             let universe = Universe(
                 id: universeFromDataStore["id"] as! String,
                 title: universeFromDataStore["title"] as! String,
-                locations: Location.getLocations(from: universeFromDataStore["locations"] as! [[String : Any]])
+                locations: Location.getLocations(from: universeFromDataStore["locations"] as! [[String : Any]]), type: .universe
             )
             universes.append(universe)
         }
@@ -31,6 +32,7 @@ struct Location {
     let id: String
     let title: String
     let years: [Year]
+    let type: Question
     
     static func getLocations(from locationsFromDataStore: [[String : Any]]) -> [Location] {
         var locations: [Location] = []
@@ -39,7 +41,7 @@ struct Location {
             let location = Location(
                 id: locationFromDataStore["id"] as! String,
                 title: locationFromDataStore["title"] as! String,
-                years: Year.getYears(from: locationFromDataStore["years"] as! [[String : Any]])
+                years: Year.getYears(from: locationFromDataStore["years"] as! [[String : Any]]), type: .location
             )
             locations.append(location)
         }
@@ -54,6 +56,7 @@ struct Year {
     let time: DataStore.Time
     let description: String
     let routes: [Route]
+    let type: Question
     
     static func getYears(from yearsFromDataStore: [[String : Any]]) -> [Year] {
         var years: [Year] = []
@@ -64,7 +67,7 @@ struct Year {
                 title: yearFromDataStore["title"] as! String,
                 time: yearFromDataStore["time"] as! DataStore.Time,
                 description: yearFromDataStore["description"] as! String,
-                routes: Route.getRoutes(from: yearFromDataStore["routes"] as! [[String : Any]])
+                routes: Route.getRoutes(from: yearFromDataStore["routes"] as! [[String : Any]]), type: .year
             )
             years.append(year)
         }
