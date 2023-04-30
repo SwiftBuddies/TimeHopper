@@ -29,7 +29,7 @@ final class QuizViewController: UIViewController {
     
     // MARK: - Private properties
     private var questionIndex = 0
-    private var quizQuestions = QuizQuestion.getQuizQuestions(from: DataStore.shared.quizQuestions)
+    private let quizQuestions = QuizQuestion.getQuizQuestions(from: DataStore.shared.quizQuestions)
     
     private var currentAnswers: [QuizAnswer] {
         quizQuestions[questionIndex].answers
