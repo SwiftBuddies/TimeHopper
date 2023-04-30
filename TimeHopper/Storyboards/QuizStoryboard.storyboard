@@ -124,12 +124,12 @@
                         <outlet property="secondSwitch" destination="kF3-dq-qOR" id="J1I-Me-YZ2"/>
                         <outlet property="thirdAnswerLabel" destination="OLC-0A-8Zp" id="MK6-sy-ulA"/>
                         <outlet property="thirdSwitch" destination="Y1w-Xz-mrm" id="Y4D-ao-yYg"/>
-                        <segue destination="LVq-Em-046" kind="presentation" identifier="locationResultSegue" id="5sO-M9-V1P"/>
+                        <segue destination="LVq-Em-046" kind="show" identifier="location" id="fLO-FS-fbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922.32558139534888" y="-14.806866952789701"/>
+            <point key="canvasLocation" x="923" y="-16"/>
         </scene>
         <!--location-->
         <scene sceneID="9v3-HP-ByM">
@@ -139,7 +139,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvD-Pr-6jN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592" y="-15"/>
+            <point key="canvasLocation" x="1582" y="-16"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sf8-RN-2IY">
