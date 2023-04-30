@@ -27,11 +27,16 @@ final class QuizViewController: UIViewController {
     
     // MARK: - Private properties
     private var questionIndex = 0
-    private let questions = Question.getQuestions() // вся логика предварительно прописанная, ожидает DataStore + Models
-    private var answersChosen: [Answer] = []
-    private var currentAnswers: [Answer] {
-        questions[questionIndex].answers
+    private var quizQuestions: [QuizQuestion] {
+        DataStore.shared.quizQuestions
     }
+    
+    private var currentAnswers: [QuizAnswer] {
+        quizQuestions[questionIndex].answers
+    }
+    
+    private var answerChosen: [QuizAnswer] = []
+    
     
     // MARK: -  View Life Cycle
     override func viewDidLoad() {
@@ -43,7 +48,7 @@ final class QuizViewController: UIViewController {
     @IBAction func answerButtonPressed(_ sender: Any) {
         for (index, answerSwitch) in [firstSwitch, secondSwitch, thirdSwitch, fourthSwitch].enumerated() {
             if answerSwitch?.isOn == true {
-                answersChosen.append(currentAnswers[index])
+                answerChosen.append(currentAnswers[index])
             }
         }
         nextQuestion()
@@ -59,7 +64,7 @@ private extension QuizViewController {
     }
     
     func updateUI() {
-        let currentQuestion = questions[questionIndex]
+        let currentQuestion = quizQuestions[questionIndex]
         questionLabel.text = currentQuestion.title
         
         //Какой заголовок вывести в квизе?
@@ -74,7 +79,7 @@ private extension QuizViewController {
             title = "Последний рывок... 😎"
         }
         
-        let totalProgress = Float(questionIndex) / Float(questions.count)
+        let totalProgress = Float(questionIndex) / Float(quizQuestions.count)
         questionProgressView.setProgress(totalProgress, animated: true)
         
         for (index, answer) in currentAnswers.enumerated() {
@@ -95,7 +100,7 @@ private extension QuizViewController {
     func nextQuestion() {
         questionIndex += 1
         
-        if questionIndex < questions.count {
+        if questionIndex < quizQuestions.count {
             updateUI()
             return
         }
