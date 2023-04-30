@@ -19,6 +19,7 @@ final class QuestionsViewController: UIViewController {
     
     var currentUniverse: Universe?
     var selectedYear: Year?
+    var selectedLocation: Location?
     var userName: String?
     
     override func viewDidLoad() {
@@ -47,7 +48,6 @@ final class QuestionsViewController: UIViewController {
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        
         if questionTopicLabel.text == Question.universe.textQuestion {
             if sender == firstAnswer {
                 currentUniverse = universes[0]
@@ -55,10 +55,12 @@ final class QuestionsViewController: UIViewController {
                 currentUniverse = universes[1]
             }
             questionTopicLabel.text = Question.location.textQuestion
-            updateUI()
+            updateUI(selectedLocationIndex: 0)
         } else if  questionTopicLabel.text == Question.location.textQuestion {
             questionTopicLabel.text = Question.year.textQuestion
-            updateUI()
+            let selectedLocationIndex = sender == firstAnswer ? 0 : 1
+            updateUI(selectedLocationIndex: selectedLocationIndex)
+            questionTopicLabel.text = Question.year.textQuestion
         } else if questionTopicLabel.text == Question.year.textQuestion {
             if let year = currentUniverse?.locations[0].years.first(where: { $0.title == sender.currentTitle }) {
                 selectedYear = year
@@ -67,12 +69,14 @@ final class QuestionsViewController: UIViewController {
         }
         thirdAnswer.isHidden = true
     }
-   
+    
+    
 }
+
 
 // MARK: - Private Methods
 extension QuestionsViewController {
-    private func updateUI() {
+    private func updateUI(selectedLocationIndex: Int?) {
         guard let universe = currentUniverse else {
             return
         }
@@ -87,14 +91,18 @@ extension QuestionsViewController {
             secondAnswer.setTitle(universe.locations[1].title, for: .normal)
         } else if questionTopicLabel.text == Question.year.textQuestion {
             // Показываем названия годов на следующих двух кнопках
-            if let year = universe.locations[0].years.first {
-                firstAnswer.setTitle(year.title, for: .normal)
-            }
-            if universe.locations[0].years.count > 1 {
-                let year = universe.locations[0].years[1]
-                secondAnswer.setTitle(year.title , for: .normal)
+            if let locationIndex = selectedLocationIndex, locationIndex < universe.locations.count {
+                let location = universe.locations[locationIndex]
+                if let year = location.years.first {
+                    firstAnswer.setTitle(year.title, for: .normal)
+                }
+                if location.years.count > 1 {
+                    let year = location.years[1]
+                    secondAnswer.setTitle(year.title, for: .normal)
+                }
             }
         }
     }
+    
+    
 }
-
