@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1mQ-JW-bRH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--Questions View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="questions" id="Y6W-OH-hqX" customClass="QuestionsViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="QuestionsViewController" customModule="TimeHopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,9 +27,6 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VWi-1p-Wp5"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Om-NP-jh1">
                                         <rect key="frame" x="0.0" y="45" width="288" height="29"/>
@@ -38,20 +35,14 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8A6-fy-dje"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPq-rw-hU7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YO4-q1-d1Q">
                                         <rect key="frame" x="0.0" y="90" width="288" height="29"/>
                                         <color key="backgroundColor" systemColor="linkColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Тайный путь"/>
-                                        <connections>
-                                            <segue destination="Ki5-6t-161" kind="show" identifier="quizSegue" id="ElR-yr-cLY"/>
-                                        </connections>
+                                        <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -80,33 +71,12 @@
                         <outlet property="firstAnswer" destination="4Y2-6s-0EZ" id="jLB-Bc-kKI"/>
                         <outlet property="questionTopicLabel" destination="VDE-cg-KWS" id="DvY-Fk-cE8"/>
                         <outlet property="secondAnswer" destination="0Om-NP-jh1" id="ouZ-sw-caQ"/>
-                        <outlet property="thirdAnswer" destination="xPq-rw-hU7" id="TmX-rT-upo"/>
-                        <segue destination="jY7-fH-01k" kind="show" identifier="locationSegue" id="ZaA-iG-UTK"/>
+                        <outlet property="thirdAnswer" destination="YO4-q1-d1Q" id="ghf-ug-mHE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-819" y="-352"/>
-        </scene>
-        <!--location-->
-        <scene sceneID="ibd-jF-qsV">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="location" storyboardName="Location" referencedIdentifier="location" id="jY7-fH-01k" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="mH4-gg-KRQ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ej5-dq-poO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="376" y="-398"/>
-        </scene>
-        <!--quiz-->
-        <scene sceneID="bnm-oC-2MF">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="quiz" storyboardName="QuizStoryboard" referencedIdentifier="quiz" id="Ki5-6t-161" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="dkj-pA-Hvn"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f6c-wa-Yba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="102" y="-74"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zv4-qi-VE8">

@@ -49,7 +49,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Настроить машину времени"/>
                                 <connections>
-                                    <segue destination="N9F-kI-LDS" kind="show" id="Udv-JP-1bd"/>
+                                    <segue destination="N9F-kI-LDS" kind="show" identifier="showQuestionsVC" id="Udv-JP-1bd"/>
                                 </connections>
                             </button>
                         </subviews>
