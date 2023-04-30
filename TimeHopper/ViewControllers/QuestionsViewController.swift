@@ -76,10 +76,7 @@ final class QuestionsViewController: UIViewController {
         }
         thirdAnswer.isHidden = true
     }
-    
-    @IBAction func secretButtonPressed() {
-        performSegue(withIdentifier: "quizSegue", sender: nil)
-    }
+
 }
 
 // MARK: - Private Methods
