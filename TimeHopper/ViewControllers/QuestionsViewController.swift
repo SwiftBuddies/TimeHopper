@@ -19,7 +19,7 @@ final class QuestionsViewController: UIViewController {
     
     var currentUniverse: Universe?
     var selectedYear: Year?
-    var userName = ""
+    var userName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +38,12 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let quizVC = segue.destination as? QuizViewController else { return }
-        quizVC.universes = universes
-        
-        guard let locationVC = segue.destination as? LocationViewController else { return }
-        locationVC.selectedYear = selectedYear
-        locationVC.userName = userName
+        if let quizVC = segue.destination as? QuizViewController {
+            quizVC.universes = universes
+        }  else if let locationVC = segue.destination as? LocationViewController {
+            locationVC.selectedYear = selectedYear
+            locationVC.userName = userName
+        }
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
