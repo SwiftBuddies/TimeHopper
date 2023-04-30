@@ -41,22 +41,13 @@ final class QuestionsViewController: UIViewController {
         guard let quizVC = segue.destination as? QuizViewController else { return }
         quizVC.universes = universes
         
-//        guard let locationVC = segue.destination as? LocationTabBarController else { return }
-//        guard let viewControllers = locationVC.viewControllers else { return }
-//
-//        viewControllers.forEach { viewController in
-//            if let locationVC = viewController as? LocationTabBarController {
-//                locationVC.year = selectedYear
-//                locationVC.userName = userName
-//            } else if let navigationVC = viewController as? UINavigationController {
-//                guard let locationTableVC = navigationVC.topViewController as? LocationTableViewController else { return }
-//                locationTableVC.year = selectedYear
-//                locationTableVC.userName = userName
-//            }
-//        }
+        guard let locationVC = segue.destination as? LocationViewController else { return }
+        locationVC.selectedYear = selectedYear
+        locationVC.userName = userName
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
+        
         if questionTopicLabel.text == Question.universe.textQuestion {
             if sender == firstAnswer {
                 currentUniverse = universes[0]
@@ -76,7 +67,7 @@ final class QuestionsViewController: UIViewController {
         }
         thirdAnswer.isHidden = true
     }
-
+   
 }
 
 // MARK: - Private Methods

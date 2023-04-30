@@ -9,13 +9,14 @@ import UIKit
 
 final class LocationViewController: UIViewController {
     
-    var year: Year!
+    var selectedYear: Year!
     var userName: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
        
-     
+       print(selectedYear)
+        print(userName)
 
         
     }

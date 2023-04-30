@@ -9,8 +9,7 @@ import UIKit
 
 final class LocationTableViewController: UITableViewController {
     
-    var year: Year!
-    var userName: String!
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
