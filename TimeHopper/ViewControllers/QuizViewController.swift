@@ -25,8 +25,6 @@ final class QuizViewController: UIViewController {
     @IBOutlet var thirdSwitch: UISwitch!
     @IBOutlet var fourthSwitch: UISwitch!
     
-    var universes: Universe!
-    
     // MARK: - Private properties
     private var questionIndex = 0
     private let quizQuestions = QuizQuestion.getQuizQuestions(from: DataStore.shared.quizQuestions)
